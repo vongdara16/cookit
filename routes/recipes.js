@@ -16,6 +16,8 @@ router.post('/', isLoggedIn, recipesCtrl.create)
 
 router.put('/:id', isLoggedIn, recipesCtrl.update)
 
+router.delete('/:id', isLoggedIn, recipesCtrl.delete)
+
 export{
   router
 }

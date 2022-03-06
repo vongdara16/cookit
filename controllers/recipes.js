@@ -94,6 +94,10 @@ function update(req, res){
   })
 }
 
+function deleteRecipe(req, res){
+  console.log('delete recipe')
+}
+
 export{
   index,
   newRecipe as new, 
@@ -101,4 +105,5 @@ export{
   show,
   edit,
   update,
+  deleteRecipe as delete,
 }
