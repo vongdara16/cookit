@@ -1,0 +1,26 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h3><%= title %> page</h1>
+  <h1><%= recipe.name %></h1>
+  <h4>By: <%= recipe.author.name %> </h4>
+  <form action="/recipes/<%= recipe._id %>?_method=PUT" method="post">
+    <label for="">Link: 
+      <input type="text" name="link" value="<%= recipe.link  %>" >
+    </label>
+    <label for="">Ingredients: 
+      <input type="text" name="ingredients" value="placeholder for Ingredients later">
+    </label>
+    <label for="">Quantity: 
+      <input type="text" name="quantity" value="<%= recipe.quantity %>" >
+    </label>
+    <label for="">Instructions: 
+      <input type="text" name="instructions" value="<%= recipe.instructions %>" >
+    </label>
+    <button type="submit">Save Recipe</button>
+  </form>
+
+</main>
+
+<%- include('../partials/footer') %>

@@ -9,7 +9,7 @@
     <%= recipe.link  %> 
   </label>
   <label for="">Ingredients: 
-    
+    placeholder for Ingredients later
   </label>
   <label for="">Quantity: 
     <%= recipe.quantity %> 
@@ -18,6 +18,11 @@
     <%= recipe.instructions %> 
   </label>
 
+  <% if (recipe.author.equals(user?.profile._id)) { %>
+    <form action="/recipes/<%= recipe._id %>/edit">
+      <button type="submit">EDIT RECIPE</button>
+    </form>
+  <% } %> 
 </main>
 
 <%- include('../partials/footer') %>

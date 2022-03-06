@@ -54,6 +54,44 @@ function show(req, res){
       title: 'Show recipe'
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function edit(req, res){
+  console.log('edit this recipe')
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    res.render('recipes/edit', {
+      recipe,
+      title: 'Edit recipe'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function update(req, res){
+  console.log('update new recipe')
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    if (recipe.author.equals(req.user.profile._id)){
+      recipe.updateOne(req.body, {new: true})
+      .then(() =>{
+        res.redirect(`/recipes/${recipe._id}`)
+      })
+    } else {
+      throw new Error ('Not Authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
 }
 
 export{
@@ -61,4 +99,6 @@ export{
   newRecipe as new, 
   create,
   show,
+  edit,
+  update,
 }
