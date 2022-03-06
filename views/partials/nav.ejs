@@ -4,7 +4,11 @@
 </head>
 <body>
   <nav>
+    <a href="/">HOME |</a>
+    <a href="/recipes"> ALL RECIPES |</a>
     <% if (user) { %>
+      <a href="/recipes/new"> ADD NEW RECIPE |</a>
+
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>

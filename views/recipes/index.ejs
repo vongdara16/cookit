@@ -2,7 +2,24 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>COOKiT!👨‍🍳🍳</h1>
+  <h1><%= title %> </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>RECIPE NAME: </th>
+        <th>DATE CREATED: </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% recipes.forEach(recipe => { %>
+        <tr>
+          <td><%= recipe.name %> </td>
+          <td><%= recipe.date %> </td>
+        </tr>
+      <% }) %> 
+    </tbody>
+  </table>
+
 </main>
 
 <%- include('../partials/footer') %>
