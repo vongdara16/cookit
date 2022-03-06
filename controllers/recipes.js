@@ -96,6 +96,21 @@ function update(req, res){
 
 function deleteRecipe(req, res){
   console.log('delete recipe')
+  Recipe.findById(req.params.id)
+  .then(recipe => {
+    if (recipe.author.equals(req.user.profile._id)){
+      recipe.delete()
+      .then(() =>{
+        res.redirect('/recipes')
+      })
+    } else {
+      throw new Error ('Not Authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
 }
 
 export{
