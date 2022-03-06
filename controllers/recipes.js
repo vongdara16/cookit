@@ -24,10 +24,10 @@ function newRecipe(req, res){
 }
 
 function create(req, res){
-  console.log('create a recipe')
-  console.log(req.body, ' body')
+  // console.log('create a recipe')
+  // console.log(req.body, ' body')
   // console.log(req, ' req')
-  console.log(req.user, ' user')
+  // console.log(req.user, ' user')
   req.body.author = req.user.profile._id
   // req.body.author.name = req.user.profile.name
   for(let key in req.body){
@@ -44,8 +44,21 @@ function create(req, res){
   })
 }
 
+function show(req, res){
+  console.log('show a recipe')
+  Recipe.findById(req.params.id)
+  .populate('author')
+  .then(recipe =>{
+    res.render('recipes/show', {
+      recipe,
+      title: 'Show recipe'
+    })
+  })
+}
+
 export{
   index,
   newRecipe as new, 
   create,
+  show,
 }

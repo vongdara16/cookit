@@ -14,7 +14,7 @@
     <tbody>
       <% recipes.forEach(recipe => { %>
         <tr>
-          <td><%= recipe.name %></td>
+          <td><a href="/recipes/<%= recipe._id %> "><%= recipe.name %></a></td>
           <td><%= recipe.author.name %></td>
           <td>
             <%const d = new Date(recipe.createdAt) %>
@@ -24,7 +24,6 @@
       <% }) %> 
     </tbody>
   </table>
-
 </main>
 
 <%- include('../partials/footer') %>
