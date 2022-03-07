@@ -126,6 +126,7 @@ function deleteRecipe(req, res){
 function apps(req, res){
   console.log('show all apps')
   Recipe.find({})
+  .populate('author')
   .then(recipes => {
     res.render('recipes/apps', {
       title: 'SHOW ALL APPS',
@@ -140,9 +141,10 @@ function apps(req, res){
 function entrees(req, res){
   console.log('show all entrees')
   Recipe.find({})
+  .populate('author')
   .then(recipes => {
     res.render('recipes/entrees', {
-      title: 'SHOW ALL APPS',
+      title: 'SHOW ALL ENTREES',
       recipes
     })
   })
@@ -152,11 +154,12 @@ function entrees(req, res){
   })
 }
 function desserts(req, res){
-  console.log('show all dessets')
+  console.log('show all desserts')
   Recipe.find({})
+  .populate('author')
   .then(recipes => {
     res.render('recipes/desserts', {
-      title: 'SHOW ALL APPS',
+      title: 'SHOW ALL DESSERTS',
       recipes
     })
   })

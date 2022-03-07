@@ -1,0 +1,37 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+  <% if (recipes.length){ %> 
+  <table>
+    <thead>
+      <tr>
+        <th>RECIPE NAME: </th>
+        <th>TYPE: </th>
+        <th>AUTHOR: </th>
+        <th>DATE CREATED: </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% recipes.forEach(recipe => { %>
+        <% if (recipe.type === 'Dessert') {%>
+          <tr>
+            <td><a href="/recipes/<%= recipe._id %> "><%= recipe.name %></a></td>
+            <td><%= recipe.type %> </td>
+            <td><%= recipe.author.name %></td>
+            <td>
+              <%const d = new Date(recipe.createdAt) %>
+              <%= recipe.createdAt ? d.toDateString() : '' %>
+            </td>
+          </tr>
+        <% } %> 
+      <% }) %> 
+    </tbody>
+  </table>
+  <% } else { %>
+    <h3>No Recipes Available!</h3>
+  <% } %> 
+</main>
+
+<%- include('../partials/footer') %>
