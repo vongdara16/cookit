@@ -1,0 +1,35 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h3><%= title %> page</h1>
+  <h1><%= recipe.name %></h1>
+  <h4>By: <%= recipe.author.name %> </h4>
+  <label for="">Type: 
+    <%= recipe.type %> 
+  </label>
+  <label for="">Link: 
+    <a href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a> 
+  </label>
+  <label for="">Ingredients: 
+    placeholder for Ingredients later
+  </label>
+  <label for="">Quantity: 
+    <%= recipe.quantity %> 
+  </label>
+  <label for="">Instructions: 
+    <%= recipe.instructions %> 
+  </label>
+
+  <% if (recipe.author.equals(user?.profile._id)) { %>
+    <form action="/recipes/<%= recipe._id %>/edit">
+      <button type="submit">EDIT RECIPE</button>
+    </form>
+    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="post">
+      <button type="submit">Delete Recipe</button>
+    </form>
+  <% } %> 
+
+</main>
+
+<%- include('../partials/footer') %>

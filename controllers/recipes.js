@@ -123,6 +123,49 @@ function deleteRecipe(req, res){
   })
 }
 
+function apps(req, res){
+  console.log('show all apps')
+  Recipe.find({})
+  .then(recipes => {
+    res.render('recipes/apps', {
+      title: 'SHOW ALL APPS',
+      recipes
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+function entrees(req, res){
+  console.log('show all entrees')
+  Recipe.find({})
+  .then(recipes => {
+    res.render('recipes/entrees', {
+      title: 'SHOW ALL APPS',
+      recipes
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+function desserts(req, res){
+  console.log('show all dessets')
+  Recipe.find({})
+  .then(recipes => {
+    res.render('recipes/desserts', {
+      title: 'SHOW ALL APPS',
+      recipes
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
 export{
   index,
   newRecipe as new, 
@@ -131,4 +174,7 @@ export{
   edit,
   update,
   deleteRecipe as delete,
+  apps,
+  entrees,
+  desserts,
 }

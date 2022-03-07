@@ -29,6 +29,7 @@ nav {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 7.0rem;
   gap: 10px;
 }

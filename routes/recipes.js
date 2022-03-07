@@ -6,6 +6,10 @@ const router = Router()
 
 router.get('/', recipesCtrl.index)
 
+router.get('/apps', recipesCtrl.apps)
+router.get('/entrees', recipesCtrl.entrees)
+router.get('/desserts', recipesCtrl.desserts)
+
 router.get('/new', isLoggedIn, recipesCtrl.new)
 
 router.get('/:id/edit', isLoggedIn, recipesCtrl.edit)
