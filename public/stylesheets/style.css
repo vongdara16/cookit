@@ -30,6 +30,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 7.0rem;
+  gap: 10px;
 }
 
 main {
