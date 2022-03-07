@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th>RECIPE NAME: </th>
+        <th>TYPE: </th>
         <th>AUTHOR: </th>
         <th>DATE CREATED: </th>
       </tr>
@@ -16,6 +17,7 @@
       <% recipes.forEach(recipe => { %>
         <tr>
           <td><a href="/recipes/<%= recipe._id %> "><%= recipe.name %></a></td>
+          <td><%= recipe.type %> </td>
           <td><%= recipe.author.name %></td>
           <td>
             <%const d = new Date(recipe.createdAt) %>

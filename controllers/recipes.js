@@ -25,7 +25,7 @@ function newRecipe(req, res){
       title: 'ADD RECIPE',
       ingredients,
     })
-    console.log(ingredients)
+    // console.log(ingredients)
   })
   .catch(err => {
     console.log(err)
@@ -34,8 +34,8 @@ function newRecipe(req, res){
 }
 
 function create(req, res){
-  // console.log('create a recipe')
-  // console.log(req.body, ' body')
+  console.log('create a recipe')
+  console.log(req.body, ' body')
   // console.log(req, ' req')
   // console.log(req.user, ' user')
   req.body.author = req.user.profile._id
