@@ -8,6 +8,7 @@ const recipeSchema = new Schema({
   link: String,
   instructions: String,
   quantity: Number,
+  ingredients: [{type: Schema.Types.ObjectId, ref: 'Ingredient'}],
   author: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true
