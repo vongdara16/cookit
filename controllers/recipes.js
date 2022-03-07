@@ -1,4 +1,5 @@
-import { Recipe } from "../models/recipe.js";
+import { Recipe } from '../models/recipe.js';
+import { Ingredient } from '../models/ingredient.js'
 
 function index(req, res){
   console.log('COOKiT!')
@@ -18,8 +19,17 @@ function index(req, res){
 
 function newRecipe(req, res){
   console.log('add new recipe')
-  res.render('recipes/new', {
-    title: 'ADD RECIPE'
+  Ingredient.find({})
+  .then(ingredients => {
+    res.render('recipes/new', {
+      title: 'ADD RECIPE',
+      ingredients,
+    })
+    console.log(ingredients)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
   })
 }
 
@@ -35,7 +45,7 @@ function create(req, res){
   }
   Recipe.create(req.body)
   .then(recipe => {
-    console.log(Date(recipe.createdAt).toLocaleString())
+    // console.log(Date(recipe.createdAt).toLocaleString())
     res.redirect('/recipes')
   })
   .catch(err => {

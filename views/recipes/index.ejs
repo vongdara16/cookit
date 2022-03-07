@@ -3,6 +3,7 @@
 
 <main>
   <h1><%= title %> </h1>
+  <% if (recipes.length){ %> 
   <table>
     <thead>
       <tr>
@@ -24,6 +25,9 @@
       <% }) %> 
     </tbody>
   </table>
+  <% } else { %>
+    <h3>No Recipes Available!</h3>
+  <% } %> 
 </main>
 
 <%- include('../partials/footer') %>

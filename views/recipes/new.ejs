@@ -10,16 +10,32 @@
         <input type="text" name="name" autocomplete="off">
       </label>
       <label>
+        Type: 
+        <select name="type">
+          <option value="">Appetizer</option>
+          <option value="">Entree</option>
+          <option value="">Dessert</option>
+        </select>
+      </label>
+      <label>
         Link: 
         <input type="text" name="link">
       </label>
       <label>
-        Instructions
-        <input type="text" name="instructions">
+        Ingredients: 
+        <select name="ingredientId">
+          <% ingredients.forEach(ingredient => { %>
+            <option value="<%= ingredient._id %>"><%= ingredient.name %> </option>
+          <% }) %> 
+        </select>
       </label>
       <label>
         quantity
         <input type="text" name="quantity">
+      </label>
+      <label>
+        Instructions
+        <input type="text" name="instructions">
       </label>
       <button type="submit">Add Recipe</button>
     </form>
