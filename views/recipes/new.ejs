@@ -25,18 +25,21 @@
       <div>
         <label>
           Ingredients: 
-          <input list="ingredientsList" name="ingredients" form="inner-form">
+          <input list="ingredientsList" name="ingredients" form="add-ingredient-to-recipe-form" autocomplete="off">
         </label>
+        <button type="submit" form="add-ingredient-form">+</button>
         <datalist id="ingredientsList">
-          <% ingredients.forEach(ingredient => { %> 
-            <option value="<%= ingredient.name %>">
-          <% }) %> 
+          <%# if (recipes.ingredients.length) { %> 
+            <%# recipes.ingredients.forEach(ingredient => { %> 
+              <option value="<%# ingredient.name %>">
+            <%# }) %> 
+          <%# } %> 
         </datalist>
         <label>
           quantity: 
-          <input type="text" name="quantity">
+          <input type="text" name="quantity" form="add-ingredient-to-recipe-form">
         </label>
-        <button type="submit" form="inner-form">Submit Ingredient</button>
+        <button type="submit" form="add-ingredient-to-recipe-form">Submit Ingredient</button>
       </div>
       <label>
         Instructions: 
@@ -44,7 +47,8 @@
       </label>
       <button type="submit">Add Recipe</button>
     </form>
-    <form action="/recipes/new/ingredients" method="post" id="inner-form"></form>
+    <form action="/recipes/new/ingredients" method="post" id="add-ingredient-to-recipe-form"></form>
+    <form action="/recipes/new/ingredients" method="post" id="add-ingredient-form"></form>
   <% } %>
 </main>
 

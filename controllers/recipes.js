@@ -1,5 +1,5 @@
 import { Recipe } from '../models/recipe.js';
-import { Ingredient } from '../models/ingredient.js'
+// import { Ingredient } from '../models/ingredient.js'
 
 function index(req, res){
   console.log('COOKiT!')
@@ -19,18 +19,33 @@ function index(req, res){
 
 function newRecipe(req, res){
   console.log('add new recipe')
-  Ingredient.find({})
-  .then(ingredients => {
+
+  Recipe.find({})
+  .then(recipes => {
+    console.log(recipes.ingredients)
     res.render('recipes/new', {
-      title: 'ADD RECIPE',
-      ingredients,
+      title: 'Add Recipe!',
+      recipes
     })
-    // console.log(ingredients)
   })
   .catch(err => {
     console.log(err)
     res.redirect('/recipes')
   })
+  console.log(req.body)
+  // Ingredient.find({})
+  // .then(ingredients => {
+    // res.render('recipes/new',{
+    //   title: 'ADD RECIPE',
+      // ingredients,
+    // })
+    // console.log(req.body)
+    // console.log(ingredients)
+  // })
+  // .catch(err => {
+  //   console.log(err)
+  //   res.redirect('/recipes')
+  // })
 }
 
 function create(req, res){
@@ -173,6 +188,33 @@ function addIngredientToNew(req, res){
   console.log('adding ingredient to new recipe page!')
   console.log(req.body)
 }
+
+// function newIngredient(req, res){
+//   console.log('add new ingredient')
+//   Ingredient.find({})
+//   .then(ingredients => {
+//     res.render('ingredients/new', {
+//       title: 'Add Ingredients',
+//       ingredients,
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/recipes')
+//   })
+// }
+
+// function create(req, res){
+//   console.log('create a new ingredient')
+//   Ingredient.create(req.body)
+//   .then(ingredient => {
+//     res.redirect('/ingredients/new')
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/recipes')
+//   })
+// }
 
 export{
   index,
