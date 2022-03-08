@@ -7,7 +7,8 @@ const ingredientSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-  }
+  },
+  quantity: Number
 }, {
   timestamps: true
 })

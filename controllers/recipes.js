@@ -35,7 +35,7 @@ function newRecipe(req, res){
 
 function create(req, res){
   console.log('create a recipe')
-  console.log(req.body, ' body')
+  // console.log(req.body, ' body')
   // console.log(req, ' req')
   // console.log(req.user, ' user')
   req.body.author = req.user.profile._id
@@ -169,6 +169,11 @@ function desserts(req, res){
   })
 }
 
+function addIngredientToNew(req, res){
+  console.log('adding ingredient to new recipe page!')
+  console.log(req.body)
+}
+
 export{
   index,
   newRecipe as new, 
@@ -180,4 +185,5 @@ export{
   apps,
   entrees,
   desserts,
+  addIngredientToNew,
 }

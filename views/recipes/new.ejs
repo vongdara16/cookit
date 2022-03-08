@@ -5,7 +5,7 @@
 <main>
   <% if (user) { %>
     <h2><%= title %></h2>
-    <form action="/recipes" method="POST">
+    <form action="/recipes" method="post">
       <label>
         Name: 
         <input type="text" name="name" autocomplete="off">
@@ -22,24 +22,29 @@
         Link: 
         <input type="text" name="link">
       </label>
-      <label>
-        Ingredients: 
-        <select name="ingredientId">
-          <% ingredients.forEach(ingredient => { %>
-            <option value="<%= ingredient._id %>"><%= ingredient.name %> </option>
+      <div>
+        <label>
+          Ingredients: 
+          <input list="ingredientsList" name="ingredients" form="inner-form">
+        </label>
+        <datalist id="ingredientsList">
+          <% ingredients.forEach(ingredient => { %> 
+            <option value="<%= ingredient.name %>"></option>
           <% }) %> 
-        </select>
-      </label>
-      <label>
-        quantity
-        <input type="text" name="quantity">
-      </label>
+        </datalist>
+        <label>
+          quantity: 
+          <input type="text" name="quantity">
+        </label>
+        <button type="submit" form="inner-form">Submit Ingredient</button>
+      </div>
       <label>
         Instructions: 
-        <textarea name="" id="" cols="30" rows="10"></textarea>      
+        <textarea name="instructions" id="" cols="30" rows="10"></textarea>      
       </label>
       <button type="submit">Add Recipe</button>
     </form>
+    <form action="/recipes/new/ingredients" method="post" id="inner-form"></form>
   <% } %>
 </main>
 
