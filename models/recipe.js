@@ -3,19 +3,19 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const ingredientSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  quantity: {
-    type: Number, 
-    default: 0,
-  }
-}, {
-  timestamps: true
-})
+// const ingredientSchema = new Schema({
+//   name: {
+//     type: String,
+//     required: true,
+//     unique: true,
+//   },
+//   quantity: {
+//     type: Number, 
+//     default: 0,
+//   }
+// }, {
+//   timestamps: true
+// })
 
 const recipeSchema = new Schema({
   name: {type: String, required: true},
@@ -23,8 +23,8 @@ const recipeSchema = new Schema({
   link: String,
   instructions: String,
   // quantity: Number,
-  // ingredients: [{type: Schema.Types.ObjectId, ref: 'Ingredient'}],
-  ingredients: [ingredientSchema],
+  ingredients: [{type: Schema.Types.ObjectId, ref: 'Ingredient'}],
+  // ingredients: [ingredientSchema],
   author: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true

@@ -1,5 +1,5 @@
 import { Recipe } from '../models/recipe.js';
-// import { Ingredient } from '../models/ingredient.js'
+import { Ingredient } from '../models/ingredient.js'
 
 function index(req, res){
   console.log('COOKiT!')
@@ -20,32 +20,33 @@ function index(req, res){
 function newRecipe(req, res){
   console.log('add new recipe')
 
-  Recipe.find({})
-  .then(recipes => {
-    console.log(recipes.ingredients)
-    res.render('recipes/new', {
-      title: 'Add Recipe!',
-      recipes
-    })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/recipes')
-  })
-  console.log(req.body)
-  // Ingredient.find({})
-  // .then(ingredients => {
-    // res.render('recipes/new',{
-    //   title: 'ADD RECIPE',
-      // ingredients,
-    // })
-    // console.log(req.body)
-    // console.log(ingredients)
+  // Recipe.find({})
+  // .then(recipes => {
+  //   console.log(recipes.ingredients)
+  //   res.render('recipes/new', {
+  //     title: 'Add Recipe!',
+  //     recipes
+  //   })
   // })
   // .catch(err => {
   //   console.log(err)
   //   res.redirect('/recipes')
   // })
+  // console.log(req.body)
+
+  Ingredient.find({})
+  .then(ingredients => {
+    res.render('recipes/new',{
+      title: 'ADD RECIPE',
+      ingredients,
+    })
+    console.log(req.body)
+    console.log(ingredients)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
 }
 
 function create(req, res){
@@ -184,10 +185,10 @@ function desserts(req, res){
   })
 }
 
-function addIngredientToNew(req, res){
-  console.log('adding ingredient to new recipe page!')
-  console.log(req.body)
-}
+// function addIngredientToNew(req, res){
+//   console.log('adding ingredient to new recipe page!')
+//   console.log(req.body)
+// }
 
 // function newIngredient(req, res){
 //   console.log('add new ingredient')
@@ -227,5 +228,5 @@ export{
   apps,
   entrees,
   desserts,
-  addIngredientToNew,
+  // addIngredientToNew,
 }
