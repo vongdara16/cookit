@@ -39,17 +39,22 @@
         <!-- </datalist> -->
         <!-- <label>
           quantity: 
-          <input type="text" name="quantity" >
-        </label> formaction="/recipes/<%#= recipes[recipes.length-1]._id %>/ingredients"-->
-        <button type="submit" >Submit Ingredient</button>
+          <input type="text" name="quantity">
+        </label>  -->
+        <!-- formaction="/recipes/<%#= recipes[recipes.length-1]._id %>/ingredients"-->
+        <button type="submit">Submit Ingredient</button>
+        </form>
         <% const recentRecipe = recipes[recipes.length-1].ingredients %>
         
-        Current ingredients: 
-        <% recentRecipe.forEach(ingredient => { %>
-          <li><%= ingredient.name  %> </li>
-        <% }) %> 
+        <label>Current ingredients: 
+          <ul>
+            <% recentRecipe.forEach(ingredient => { %>
+              <li><%= ingredient.name  %> </li>
+              <% }) %> 
+          </ul>
+        </label>  
       
-      </form>
+
 
 
       <form action="/recipes/<%= recipes[recipes.length-1]._id %>?_method=PUT" method="post">

@@ -8,10 +8,6 @@ const ingredientSchema = new Schema({
     required: true,
     unique: true,
   },
-  // quantity: {
-  //   type: Number, 
-  //   default: null,
-  // }
 }, {
   timestamps: true
 })

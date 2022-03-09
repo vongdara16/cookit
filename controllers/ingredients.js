@@ -23,7 +23,7 @@ function create(req, res){
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/recipes')
+    res.redirect('/ingredients/new')
   })
 }
 

@@ -6,27 +6,15 @@
   <h1><%= recipe.name %></h1>
   <h4>By: <%= recipe.author.name %> </h4>
   <form action="/recipes/<%= recipe._id %>?_method=PUT" method="post">
+    <button type="submit">Save Recipe</button><br>
     <label>Link: 
       <input type="text" name="link" value="<%= recipe.link  %>" >
-    </label><br>
-    <label>Instructions: 
-      <input type="text" name="instructions" value="<%= recipe.instructions %>" >
     </label>
-    <button type="submit">Save Recipe</button>
+    <!-- <label>Instructions: 
+      <input type="text" name="instructions" value="<%= recipe.instructions %>" >
+    </label> -->
   </form>
-  <label>
-    Ingredients: 
-    <ul>
-      <% recipe.ingredients.forEach(ingredient => {  %>
-        <li><%= ingredient.name %></li>
-        <form action="/recipes/<%= recipe._id %>/ingredients/<%= ingredient._id %>?_method=DELETE" method="post">
-          <button type="submit">X</button>
-        </form>
-      <% }) %> 
-    </ul>
-  </label>
-
-
+  
   <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
     <label>Ingredients: 
       <select name="ingredientsId">
@@ -36,16 +24,26 @@
       </select>
     </label>
     <button type="submit">Submit Ingredient</button>
-
-    <%# const recentRecipe = recipes[recipes.length-1].ingredients %>
     
-    Current ingredients: 
-    <%# recentRecipe.forEach(ingredient => { %>
-      <!-- <li><%#= ingredient.name  %> </li> -->
-    <%# }) %> 
-  
-  </form>
-
-</main>
+    </form>
+    <label>
+      Ingredients: 
+      <ul>
+        <% recipe.ingredients.forEach(ingredient => {  %>
+          <li><%= ingredient.name %></li>
+          <form action="/recipes/<%= recipe._id %>/ingredients/<%= ingredient._id %>?_method=DELETE" method="post">
+            <button type="submit">X</button>
+          </form>
+        <% }) %> 
+      </ul>
+    </label>
+    <form action="/recipes/<%= recipe._id %>/instructions?_method=PATCH" method="post">
+      <label>Instructions: 
+        <input type="text" name="instructions" value="<%= recipe.instructions %>" >
+      </label>
+      <button type="submit">Save Instructions</button>
+    </form>
+    
+  </main>
 
 <%- include('../partials/footer') %>
