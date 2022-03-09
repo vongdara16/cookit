@@ -52,7 +52,7 @@
       </form>
 
 
-      <form action="/recipes" method="post">
+      <form action="/recipes/<%= recipes[recipes.length-1]._id %>?_method=PUT" method="post">
       <label>
         Instructions: 
         <textarea name="instructions" id="" cols="30" rows="10"></textarea>      
