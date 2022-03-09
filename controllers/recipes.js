@@ -49,6 +49,21 @@ function newRecipe(req, res){
   })
 }
 
+function addIngredToNew(req, res){
+  console.log('adding ingredient to new recipe')
+  // let currentIngred = []
+  Ingredient.find({})
+  .then(ingredients => {
+    // currentIngred.push(req.body)
+    // console.log(currentIngred)
+    res.render('recipes/new',{
+      title : 'add ingred to new recipe',
+      // currentIngred,
+      ingredients
+    })
+  })
+}
+
 function create(req, res){
   console.log('create a recipe')
   // console.log(req.body, ' body')
@@ -60,7 +75,7 @@ function create(req, res){
     if(req.body[key] === '') delete req.body[key]
   }
   Recipe.create(req.body)
-  .then(recipe => {
+  .then(() => {
     // console.log(Date(recipe.createdAt).toLocaleString())
     res.redirect('/recipes')
   })
@@ -185,38 +200,6 @@ function desserts(req, res){
   })
 }
 
-// function addIngredientToNew(req, res){
-//   console.log('adding ingredient to new recipe page!')
-//   console.log(req.body)
-// }
-
-// function newIngredient(req, res){
-//   console.log('add new ingredient')
-//   Ingredient.find({})
-//   .then(ingredients => {
-//     res.render('ingredients/new', {
-//       title: 'Add Ingredients',
-//       ingredients,
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/recipes')
-//   })
-// }
-
-// function create(req, res){
-//   console.log('create a new ingredient')
-//   Ingredient.create(req.body)
-//   .then(ingredient => {
-//     res.redirect('/ingredients/new')
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/recipes')
-//   })
-// }
-
 export{
   index,
   newRecipe as new, 
@@ -228,5 +211,5 @@ export{
   apps,
   entrees,
   desserts,
-  // addIngredientToNew,
+  addIngredToNew,
 }

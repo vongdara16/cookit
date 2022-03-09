@@ -10,7 +10,7 @@ const ingredientSchema = new Schema({
   },
   quantity: {
     type: Number, 
-    default: 0,
+    default: null,
   }
 }, {
   timestamps: true

@@ -20,7 +20,7 @@ router.get('/:id/edit', isLoggedIn, recipesCtrl.edit)
 
 router.post('/', isLoggedIn, recipesCtrl.create)
 
-router.post('/new/ingredients', isLoggedIn, recipesCtrl.addIngredientToNew)
+router.post('/new', isLoggedIn, recipesCtrl.addIngredToNew)
 
 router.put('/:id', isLoggedIn, recipesCtrl.update)
 
