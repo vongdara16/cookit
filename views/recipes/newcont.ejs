@@ -23,12 +23,23 @@
         <input type="text" name="link">
       </label> -->
       <form action="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients" method="post">
-        <label>Ingredients: 
+        <!-- <label>Ingredients: 
           <select name="ingredientsId">
-            <% ingredients.forEach(ingredient => { %> 
-              <option value="<%= ingredient._id %>"><%= ingredient.name %></option>
-            <% }) %> 
+            <%# ingredients.forEach(ingredient => { %> 
+              <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
+            <%# }) %> 
           </select>
+        </label> -->
+
+        <label>
+          Ingredients: 
+          <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
+          <datalist id="ingredientsList">
+            <% ingredients.forEach(ingredient => { %> 
+              <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
+            <% }) %> 
+          </datalist>
+
         </label>
         <!-- <label>
           Ingredients: 
@@ -43,7 +54,7 @@
         </label>  -->
         <!-- formaction="/recipes/<%#= recipes[recipes.length-1]._id %>/ingredients"-->
         <button type="submit">Submit Ingredient</button>
-        </form>
+      </form>
         <% const recentRecipe = recipes[recipes.length-1].ingredients %>
         
         <label>Current ingredients: 

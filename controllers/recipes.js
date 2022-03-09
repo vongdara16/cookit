@@ -95,13 +95,19 @@ function addIngredientToRecipe(req, res){
   Recipe.findById(req.params.id)
   .populate('ingredients')
   .then(recipe => {
-    console.log(recipe.ingredients)
-    console.log(req.body)
-    recipe.ingredients.push(req.body.ingredientsId)
-    recipe.save()
-    .then(() =>{
-      res.redirect(`/recipes/newcont/${recipe._id}`)
+    // console.log(recipe.ingredients)
+    console.log(req.body, 'req body')
+    console.log(req.body.ingredientsId)
+    Ingredient.findOne({name: req.body.ingredientsId})
+    .then(ingredient => {
+      console.log(ingredient)
+      recipe.ingredients.push(ingredient._id)
+      recipe.save()
+      .then(() =>{
+        res.redirect(`/recipes/newcont/${recipe._id}`)
+      })
     })
+    // console.log(req.params)
   })
   .catch(err =>{
     console.log(err)
