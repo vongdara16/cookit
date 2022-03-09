@@ -24,18 +24,29 @@
   </form>
   
   <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
-    <label>Ingredients: 
+    <!-- <label>Ingredients: 
       <select name="ingredientsId">
-        <% ingredients.forEach(ingredient => { %> 
-          <option value="<%= ingredient._id %>"><%= ingredient.name %></option>
-        <% }) %> 
+        <%# ingredients.forEach(ingredient => { %> 
+          <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
+        <%# }) %> 
       </select>
-    </label>
-    <button type="submit">Submit Ingredient</button>
+    </label> -->
     
-    </form>
     <label>
       Ingredients: 
+      <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
+      <datalist id="ingredientsList">
+        <% ingredients.forEach(ingredient => { %> 
+          <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
+        <% }) %> 
+      </datalist>
+    </label>
+    
+    <button type="submit">Submit Ingredient</button>
+    </form>
+
+    <label>
+      Current Ingredients: 
       <ul>
         <% recipe.ingredients.forEach(ingredient => {  %>
           <li><%= ingredient.name %></li>
