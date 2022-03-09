@@ -9,6 +9,14 @@
     <button type="submit">Save Recipe</button><br>
     <label>Link: 
       <input type="text" name="link" value="<%= recipe.link  %>" >
+    </label><br>
+    <label>
+      Type: 
+      <select name="type">
+        <option value="Appetizer">Appetizer</option>
+        <option value="Entree">Entree</option>
+        <option value="Dessert">Dessert</option>
+      </select>
     </label>
     <!-- <label>Instructions: 
       <input type="text" name="instructions" value="<%= recipe.instructions %>" >
@@ -39,7 +47,8 @@
     </label>
     <form action="/recipes/<%= recipe._id %>/instructions?_method=PATCH" method="post">
       <label>Instructions: 
-        <input type="text" name="instructions" value="<%= recipe.instructions %>" >
+        <textarea name="instructions" cols="30" rows="10"><%= recipe.instructions %></textarea>
+        <!-- <input type="text" name="instructions" value="<%#= recipe.instructions %>" > -->
       </label>
       <button type="submit">Save Instructions</button>
     </form>

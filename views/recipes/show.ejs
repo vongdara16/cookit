@@ -8,22 +8,31 @@
   <label for="">Type: 
     <%= recipe.type %> 
   </label>
-  <label for="">Link: 
-    <a href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a> 
+  <label>Link: 
+    <% if(recipe.link) { %>
+      <a href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a> 
+    <% } else { %>
+      <span>None</span>
+    <% } %> 
   </label>
-  <label for="">Ingredients: 
-    <ul>
-      <% recipe.ingredients.forEach(ingredient => { %> 
-        <li><%= ingredient.name %> </li>
-      <% }) %> 
-    </ul>
-  </label>
-  <label for="">Quantity: 
-    <%= recipe.quantity %> 
-  </label>
-  <label for="">Instructions: 
-    <%= recipe.instructions %> 
-  </label>
+
+  <% if(recipe.ingredients.length) { %>
+    <label for="">Ingredients: 
+      <ul>
+        <% recipe.ingredients.forEach(ingredient => { %> 
+          <li><%= ingredient.name %> </li>
+        <% }) %> 
+      </ul>
+    </label>
+  <% } %> 
+  <!-- <label for="">Quantity: 
+    <%#= recipe.quantity %> 
+  </label> -->
+  <% if(recipe.instructions) { %>
+    <label for="">Instructions: 
+      <%= recipe.instructions %> 
+    </label>
+  <% } %> 
 
   <% if (recipe.author.equals(user?.profile._id)) { %>
     <form action="/recipes/<%= recipe._id %>/edit">
