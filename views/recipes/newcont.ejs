@@ -40,8 +40,8 @@
         <!-- <label>
           quantity: 
           <input type="text" name="quantity" >
-        </label> -->
-        <button type="submit" formaction="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients">Submit Ingredient</button>
+        </label> formaction="/recipes/<%#= recipes[recipes.length-1]._id %>/ingredients"-->
+        <button type="submit" >Submit Ingredient</button>
         <% const recentRecipe = recipes[recipes.length-1].ingredients %>
         
         Current ingredients: 

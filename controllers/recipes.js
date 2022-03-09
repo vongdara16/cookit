@@ -168,9 +168,13 @@ function edit(req, res){
   Recipe.findById(req.params.id)
   .populate('ingredients')
   .then(recipe => {
-    res.render('recipes/edit', {
-      recipe,
-      title: 'Edit recipe'
+    Ingredient.find({})
+    .then(ingredients => {
+      res.render('recipes/edit', {
+        recipe,
+        title: 'Edit recipe',
+        ingredients,
+      })
     })
   })
   .catch(err => {
@@ -194,6 +198,26 @@ function deleteIngredient(req, res){
     })
   })
   .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function addIngredientToRecipeEdit(req, res){
+  console.log('test add ingred to recipe function')
+  Recipe.findById(req.params.id)
+  .populate('ingredients')
+  .then(recipe => {
+    console.log(recipe.ingredients)
+    console.log(req.body)
+    recipe.ingredients.push(req.body.ingredientsId)
+    recipe.save()
+    // .populate('ingredients')
+    .then(() =>{
+      res.redirect(`/recipes/${recipe._id}/edit`)
+    })
+  })
+  .catch(err =>{
     console.log(err)
     res.redirect('/recipes')
   })
@@ -299,4 +323,5 @@ export{
   newCont,
   addIngredientToRecipe,
   deleteIngredient,
+  addIngredientToRecipeEdit,
 }

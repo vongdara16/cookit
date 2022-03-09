@@ -27,6 +27,25 @@
   </label>
 
 
+  <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
+    <label>Ingredients: 
+      <select name="ingredientsId">
+        <% ingredients.forEach(ingredient => { %> 
+          <option value="<%= ingredient._id %>"><%= ingredient.name %></option>
+        <% }) %> 
+      </select>
+    </label>
+    <button type="submit">Submit Ingredient</button>
+
+    <%# const recentRecipe = recipes[recipes.length-1].ingredients %>
+    
+    Current ingredients: 
+    <%# recentRecipe.forEach(ingredient => { %>
+      <!-- <li><%#= ingredient.name  %> </li> -->
+    <%# }) %> 
+  
+  </form>
+
 </main>
 
 <%- include('../partials/footer') %>

@@ -28,6 +28,10 @@ router.post('/newcont', isLoggedIn, recipesCtrl.createNewCont)
 
 // router.post('/new', isLoggedIn, recipesCtrl.addIngredToNew)
 
+
+
+router.post('/:id/ingredients/edit', isLoggedIn, recipesCtrl.addIngredientToRecipeEdit)
+
 router.post('/:id/ingredients', isLoggedIn, recipesCtrl.addIngredientToRecipe)
 
 router.put('/:id', isLoggedIn, recipesCtrl.update)
