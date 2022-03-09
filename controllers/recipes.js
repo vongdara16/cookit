@@ -166,10 +166,31 @@ function show(req, res){
 function edit(req, res){
   console.log('edit this recipe')
   Recipe.findById(req.params.id)
+  .populate('ingredients')
   .then(recipe => {
     res.render('recipes/edit', {
       recipe,
       title: 'Edit recipe'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function deleteIngredient(req, res){
+  console.log('this will delete ingredient')
+  console.log(req.params.recipeId, 'req param id')
+  Recipe.findById(req.params.recipeId)
+  .populate('ingredients')
+  .then(recipe => {
+    console.log(recipe, 'recipe')
+    console.log(req.body, 'req body')
+    recipe.ingredients.remove({_id: req.params.ingredientId})
+    recipe.save()
+    .then(() =>{
+      res.redirect(`/recipes/${recipe._id}/edit`)
     })
   })
   .catch(err => {
@@ -277,4 +298,5 @@ export{
   createNewCont,
   newCont,
   addIngredientToRecipe,
+  deleteIngredient,
 }
