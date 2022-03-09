@@ -1,0 +1,65 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/recipes/new.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (user) { %>
+    <h2><%= title %></h2>
+    <!-- <form action="/recipes" method="post">
+      <label>
+        Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Type: 
+        <select name="type">
+          <option value="Appetizer">Appetizer</option>
+          <option value="Entree">Entree</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+      </label>
+      <label>
+        Link: 
+        <input type="text" name="link">
+      </label> -->
+      <form action="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients" method="post">
+        <label>Ingredients: 
+          <select name="ingredientsId">
+            <% ingredients.forEach(ingredient => { %> 
+              <option value="<%= ingredient._id %>"><%= ingredient.name %></option>
+            <% }) %> 
+          </select>
+        </label>
+        <!-- <label>
+          Ingredients: 
+          <input list="ingredientsList" name="ingredientsId" autocomplete="off">
+        </label> -->
+        <!-- <datalist id="ingredientsList"> -->
+
+        <!-- </datalist> -->
+        <!-- <label>
+          quantity: 
+          <input type="text" name="quantity" >
+        </label> -->
+        <button type="submit" formaction="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients">Submit Ingredient</button>
+        <% const recentRecipe = recipes[recipes.length-1].ingredients %>
+        
+        Current ingredients: 
+        <% recentRecipe.forEach(ingredient => { %>
+          <li><%= ingredient.name  %> </li>
+        <% }) %> 
+      
+      </form>
+
+
+      <form action="/recipes" method="post">
+      <label>
+        Instructions: 
+        <textarea name="instructions" id="" cols="30" rows="10"></textarea>      
+      </label>
+      <button type="submit">Add Recipe</button>
+    </form>
+  <% } %>
+</main>
+
+<%- include('../partials/footer') %>

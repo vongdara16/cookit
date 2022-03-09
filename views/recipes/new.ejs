@@ -22,17 +22,21 @@
         Link: 
         <input type="text" name="link">
       </label>
-      <div>
+      <button type="submit">DONE</button>
+      <button type="submit" formaction="/recipes/newcont">Add Ingredients and Instructions</button>
+    </form>
+    <!-- <form action="/recipes/newcont" method="post">
+    </form> -->
+      <!-- <div>
         <label>
           Ingredients: 
           <input list="ingredientsList" name="ingredients" form="add-ingredient-to-recipe-form" autocomplete="off">
         </label>
-        <!-- <button type="submit" form="add-ingredient-form">+</button> -->
         <datalist id="ingredientsList">
           <%# if (ingredients.length) { %> 
-            <% ingredients.forEach(ingredient => { %> 
-              <option value="<%= ingredient.name %>"></option>
-            <% }) %> 
+            <%# ingredients.forEach(ingredient => { %> 
+              <option value="<%#= ingredient.name %>"></option>
+            <%# }) %> 
           <%# } %> 
         </datalist>
         <label>
@@ -47,7 +51,7 @@
       </label>
       <button type="submit">Add Recipe</button>
     </form>
-    <form action="/recipes/new" method="post" id="add-ingredient-to-recipe-form"></form>
+    <form action="/recipes/new" method="post" id="add-ingredient-to-recipe-form"></form> -->
     <!-- <form action="/recipes/new/ingredients" method="post" id="add-ingredient-form"></form> -->
   <% } %>
 </main>

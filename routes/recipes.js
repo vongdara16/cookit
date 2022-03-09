@@ -14,13 +14,21 @@ router.get('/desserts', recipesCtrl.desserts)
 
 router.get('/new', isLoggedIn, recipesCtrl.new)
 
+router.get('/newcont/:id', isLoggedIn, recipesCtrl.newCont)
+
 router.get('/:id', recipesCtrl.show)
 
 router.get('/:id/edit', isLoggedIn, recipesCtrl.edit)
 
+
+
 router.post('/', isLoggedIn, recipesCtrl.create)
 
-router.post('/new', isLoggedIn, recipesCtrl.addIngredToNew)
+router.post('/newcont', isLoggedIn, recipesCtrl.createNewCont)
+
+// router.post('/new', isLoggedIn, recipesCtrl.addIngredToNew)
+
+router.post('/:id/ingredients', isLoggedIn, recipesCtrl.addIngredientToRecipe)
 
 router.put('/:id', isLoggedIn, recipesCtrl.update)
 

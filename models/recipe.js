@@ -21,7 +21,10 @@ const recipeSchema = new Schema({
   name: {type: String, required: true},
   type: String,
   link: String,
-  instructions: String,
+  instructions: {
+    type: String,
+    default: ''
+  },
   // quantity: Number,
   ingredients: [{type: Schema.Types.ObjectId, ref: 'Ingredient'}],
   // ingredients: [ingredientSchema],

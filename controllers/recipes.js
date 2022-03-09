@@ -40,8 +40,8 @@ function newRecipe(req, res){
       title: 'ADD RECIPE',
       ingredients,
     })
-    console.log(req.body)
-    console.log(ingredients)
+    // console.log(req.body)
+    // console.log(ingredients)
   })
   .catch(err => {
     console.log(err)
@@ -49,20 +49,20 @@ function newRecipe(req, res){
   })
 }
 
-function addIngredToNew(req, res){
-  console.log('adding ingredient to new recipe')
-  // let currentIngred = []
-  Ingredient.find({})
-  .then(ingredients => {
-    // currentIngred.push(req.body)
-    // console.log(currentIngred)
-    res.render('recipes/new',{
-      title : 'add ingred to new recipe',
-      // currentIngred,
-      ingredients
-    })
-  })
-}
+// function addIngredToNew(req, res){
+//   console.log('adding ingredient to new recipe')
+//   // let currentIngred = []
+//   Ingredient.find({})
+//   .then(ingredients => {
+//     // currentIngred.push(req.body)
+//     // console.log(currentIngred)
+//     res.render('recipes/new',{
+//       title : 'add ingred to new recipe',
+//       // currentIngred,
+//       ingredients
+//     })
+//   })
+// }
 
 function create(req, res){
   console.log('create a recipe')
@@ -71,9 +71,9 @@ function create(req, res){
   // console.log(req.user, ' user')
   req.body.author = req.user.profile._id
   // req.body.author.name = req.user.profile.name
-  for(let key in req.body){
-    if(req.body[key] === '') delete req.body[key]
-  }
+  // for(let key in req.body){
+  //   if(req.body[key] === '') delete req.body[key]
+  // }
   Recipe.create(req.body)
   .then(() => {
     // console.log(Date(recipe.createdAt).toLocaleString())
@@ -85,10 +85,72 @@ function create(req, res){
   })
 }
 
+function createNewCont(req, res){
+  console.log('testing new cont button')
+  req.body.author = req.user.profile._id
+  // for(let key in req.body){
+  //   if(req.body[key] === '') delete req.body[key]
+  // }
+  Recipe.create(req.body)
+  .then(recipe => {
+    console.log(recipe)
+    // console.log(req.params.id)
+    // console.log(req.body)
+    res.redirect(`/recipes/newcont/${recipe._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes/new')
+  })
+}
+
+function newCont(req, res){
+  console.log('this is the new cont function')
+  // console.log(req.body)
+  Recipe.find({})
+  .populate('ingredients')
+  .then(recipes => {
+    console.log(recipes)
+    Ingredient.find({})
+    .then(ingredients => {
+      res.render('recipes/newcont', {
+        ingredients,
+        // title: 'Add Ingredients and Instructions'
+        title: `Add ingredients/instructions to Recipe ${recipes[recipes.length-1].name}`,
+        recipes,
+      })
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function addIngredientToRecipe(req, res){
+  console.log('test add ingred to recipe function')
+  Recipe.findById(req.params.id)
+  .populate('ingredients')
+  .then(recipe => {
+    console.log(recipe.ingredients)
+    console.log(req.body)
+    recipe.ingredients.push(req.body.ingredientsId)
+    recipe.save()
+    // .populate('ingredients')
+    .then(() =>{
+      res.redirect(`/recipes/newcont/${recipe._id}`)
+    })
+  })
+  .catch(err =>{
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
 function show(req, res){
   console.log('show a recipe')
   Recipe.findById(req.params.id)
-  .populate('author')
+  .populate('author ingredients')
   .then(recipe =>{
     res.render('recipes/show', {
       recipe,
@@ -211,5 +273,8 @@ export{
   apps,
   entrees,
   desserts,
-  addIngredToNew,
+  // addIngredToNew,
+  createNewCont,
+  newCont,
+  addIngredientToRecipe,
 }

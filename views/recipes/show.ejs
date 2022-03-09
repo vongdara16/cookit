@@ -12,6 +12,11 @@
     <a href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a> 
   </label>
   <label for="">Ingredients: 
+    <ul>
+      <% recipe.ingredients.forEach(ingredient => { %> 
+        <li><%= ingredient.name %> </li>
+      <% }) %> 
+    </ul>
   </label>
   <label for="">Quantity: 
     <%= recipe.quantity %> 
