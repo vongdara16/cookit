@@ -111,12 +111,13 @@ function newCont(req, res){
   .populate('ingredients')
   .then(recipes => {
     console.log(recipes)
-    Ingredient.find({})
+    const recentRecipe = recipes[recipes.length-1]
+    Ingredient.find({_id: {$nin: recentRecipe.ingredients}})
     .then(ingredients => {
       res.render('recipes/newcont', {
         ingredients,
         // title: 'Add Ingredients and Instructions'
-        title: `Add ingredients/instructions to Recipe ${recipes[recipes.length-1].name}`,
+        title: `Add ingredients/instructions to Recipe ${recentRecipe.name}`,
         recipes,
       })
     })
@@ -168,7 +169,7 @@ function edit(req, res){
   Recipe.findById(req.params.id)
   .populate('ingredients')
   .then(recipe => {
-    Ingredient.find({})
+    Ingredient.find({_id: {$nin: recipe.ingredients}})
     .then(ingredients => {
       res.render('recipes/edit', {
         recipe,
