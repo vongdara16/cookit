@@ -1,10 +1,10 @@
 <%- include('./partials/html-head') %>
+<% if (!user) { %>
+  <link rel="stylesheet" href="/stylesheets/siwg.css">
+<% } %>
 <link rel="stylesheet" href="/stylesheets/home.css">
 <%#- include('./partials/nav') %>
 
-  <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
-  <% } %>
 </head>
 <body>
 
@@ -32,10 +32,10 @@
 
   <div>
 
-    <a href="/recipes/apps">APPETIZERS</a>
-    <a href="/recipes/entrees">ENTREES</a>
-    <a href="/recipes/desserts">DESSERTS</a>
-    <a href="/recipes">ALL RECIPES</a>
+    <a class="recipe-links" id="app-link" href="/recipes/apps">APPETIZERS</a>
+    <a class="recipe-links" id="entree-link" href="/recipes/entrees">ENTREES</a>
+    <a class="recipe-links" id="dessert-link" href="/recipes/desserts">DESSERTS</a>
+    <a class="recipe-links" id="all-link" href="/recipes">ALL RECIPES</a>
   
     <% if (user) { %>
       <a href="/auth/logout">

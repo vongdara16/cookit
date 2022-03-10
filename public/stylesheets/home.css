@@ -25,12 +25,12 @@ font-family: 'Smooch Sans', sans-serif;
     font-style: italic;
     color: #D4D9D8;
     text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
-    margin: 15px auto;
+    margin: 20px auto;
 
   }
   
   img#chefhat-icon {
-    border: 0.1rem solid #EAECEC;
+    border: 0.2rem solid #EAECEC;
     border-radius: 50%;
   }
   
@@ -49,6 +49,8 @@ font-family: 'Smooch Sans', sans-serif;
     font-family: 'Merriweather', serif;
     font-weight: lighter;
     font-style: italic;
+    margin: 0 auto;
+    margin-bottom: 20px;
 
   }
   
@@ -57,8 +59,23 @@ font-family: 'Smooch Sans', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(78, 86, 86, 0.6);
+    border: 1px solid #EAECEC;
+    padding: 10px;
+    margin: 0 auto;
   }
 
+  a.recipe-links {
+    font-size: 2.5rem;
+    font-family: 'Merriweather', sans-serif;
+    text-decoration: none;
+    color: #EAECEC;
+    padding: 10px 0px;
+    border-bottom: 2px solid #EAECEC;
+  }
 
+  /* a.siwg-link {
+    transform: scale(.5, .5);
+  } */
 
 }
