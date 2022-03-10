@@ -17,6 +17,12 @@ body {
   background-color: #465C9B;
 }
 
+body > nav {
+  display: flex;
+  justify-content: center;
+  /* margin: 0 auto; */
+}
+
 h1#cookit-title {
   font-size: 9.0rem;
   font-family: 'Philosopher', sans-serif;
@@ -80,11 +86,16 @@ a.recipe-links:hover {
 }
 
 a.siwg-link {
-  width: 191px;
-  height: 46px;
+  /* width: 191px;
+  height: 46px; */
   text-align: center;
   padding: 0;
   margin: 22.5px auto;
+}
+
+.siwg {
+  width: 191px;
+  height: 46px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,11 +161,13 @@ a.siwg-link {
   }
 
   a.siwg-link {
-    /* width: 191px; */
-    /* height: 46px; */
+    /* width: 191px;
+    height: 46px; */
     /* text-align: center; */
     /* padding: 0; */
     margin: 12.5px auto;
   }
+  
+
 
 }

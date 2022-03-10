@@ -2,8 +2,8 @@
   background: url(/images/auth/google/siwg_dark_normal.png);
   cursor: pointer;
   border: none;
-  width: 191px;
-  height: 46px;
+  /* width: 191px;
+  height: 46px; */
 }
 
 .siwg-link {
