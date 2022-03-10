@@ -13,69 +13,148 @@ font-family: 'Philosopher', sans-serif;
 font-family: 'Smooch Sans', sans-serif;
 */
 
+body {
+  background-color: #465C9B;
+}
+
+h1#cookit-title {
+  font-size: 9.0rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bolder ;
+  font-style: italic;
+  color: #D4D9D8;
+  text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
+  margin: 40px auto;
+
+}
+
+img#chefhat-icon {
+  border: 0.2rem solid #EAECEC;
+  border-radius: 50%;
+  height: 6.0rem;
+  width: 6.0rem;
+}
+
+p {
+  text-align: center;
+  border: 3px solid #EAECEC;
+  border-radius: 2px;
+  padding: 10px;
+  color: #EAECEC;
+  background-color: rgba(78, 86, 86, 0.6);
+  font-size: 2.2rem;
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(78, 86, 86, 0.6);
+  border: 3px solid #EAECEC;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+a.recipe-links {
+  width: 25.0rem;
+  height: 8.0rem;
+  font-size: 2.7rem;
+  font-family: 'Merriweather', sans-serif;
+  text-decoration: none;
+  color: #EAECEC;
+  border-bottom: 2px solid #EAECEC;
+  text-align: center;
+  padding: 22.5px;
+  margin: 0 10px;
+}
+
+a.recipe-links:hover {
+  color: #1D2020;
+}
+
+a.siwg-link {
+  width: 191px;
+  height: 46px;
+  text-align: center;
+  padding: 0;
+  margin: 22.5px auto;
+}
+
 @media only screen and (max-width: 768px) {
 
-  body {
+  /* body {
     background-color: #465C9B;
-  }
+  } */
+
   h1#cookit-title {
     font-size: 6.0rem;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: bolder ;
-    font-style: italic;
-    color: #D4D9D8;
-    text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
+    /* font-family: 'Philosopher', sans-serif; */
+    /* font-weight: bolder ; */
+    /* font-style: italic; */
+    /* color: #D4D9D8; */
+    /* text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020; */
     margin: 20px auto;
 
   }
   
   img#chefhat-icon {
-    border: 0.2rem solid #EAECEC;
-    border-radius: 50%;
+    /* border: 0.2rem solid #EAECEC;
+    border-radius: 50%; */
+    height: 5.0rem;
+    width: 5.0rem;
   }
   
   p {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  
-    text-align: center;
-    border: 1px solid #EAECEC;
-    padding: 10px;
-    color: #EAECEC;
-    background-color: rgba(78, 86, 86, 0.6);
+    /* text-align: center; */
+    border: 2px solid #EAECEC;
+    /* padding: 10px; */
+    /* color: #EAECEC; */
+    /* background-color: rgba(78, 86, 86, 0.6); */
     font-size: 1.4rem;
-    font-family: 'Merriweather', serif;
-    font-weight: lighter;
-    font-style: italic;
-    margin: 0 auto;
+    /* font-family: 'Merriweather', serif; */
+    /* font-weight: lighter; */
+    /* font-style: italic; */
+    /* margin: 0 auto; */
     margin-bottom: 20px;
-
   }
   
   div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(78, 86, 86, 0.6);
-    border: 1px solid #EAECEC;
-    padding: 10px;
-    margin: 0 auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: rgba(78, 86, 86, 0.6); */
+    border: 2px solid #EAECEC;
+    /* padding: 0; */
+    /* margin: 0 auto; */
   }
 
   a.recipe-links {
+    width: 20.0rem;
+    height: 6.0rem;
     font-size: 2.5rem;
-    font-family: 'Merriweather', sans-serif;
-    text-decoration: none;
-    color: #EAECEC;
-    padding: 10px 0px;
-    border-bottom: 2px solid #EAECEC;
+    /* font-family: 'Merriweather', sans-serif; */
+    /* text-decoration: none; */
+    /* color: #EAECEC; */
+    /* border-bottom: 2px solid #EAECEC; */
+    /* text-align: center; */
+    padding: 12.5px;
+    /* margin: 0 10px; */
   }
 
-  /* a.siwg-link {
-    transform: scale(.5, .5);
-  } */
+  a.siwg-link {
+    /* width: 191px; */
+    /* height: 46px; */
+    /* text-align: center; */
+    /* padding: 0; */
+    margin: 12.5px auto;
+  }
 
 }
