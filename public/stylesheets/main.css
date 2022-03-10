@@ -49,6 +49,7 @@ nav {
   height: 7.0rem;
   gap: 10px;
   margin: 0 auto;
+  border-bottom: 2px solid black;
   /* overflow: hidden; */
 }
 
@@ -102,9 +103,6 @@ main {
   flex-direction: column;
 }
 
-
-
-/* dd container */
 .dropdown {
   display: inline-block;
   position: relative;
@@ -112,23 +110,18 @@ main {
   margin: 5px;
 }
 
-/* button */
 .dropbtn {
   padding: 10px 14px;
   color: #EAECEC;
-  /* background-color: #861cb9; */
   cursor: pointer;
-  /* transition: 0.3s ease-out; */
   text-decoration: none;
   font-size: 2.0rem;
 }
 
-/* dd content */
 .dropdown .dropdown-items {
   position: absolute;
   top: 50%;
   right: 0%;
-  /* left: -385%; */
   background-color: #EAECEC;
   width: 15rem;
   min-width: 120%;
@@ -137,7 +130,6 @@ main {
   z-index: 100000;
   visibility: hidden;
   opacity: 0;
-  /* transition: 0.3s ease-out; */
 
 }
 
@@ -146,13 +138,10 @@ main {
   padding: 8px 10px;
   display: block;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
   border-bottom: 1px solid black;
-  /* transition: 0.3s ease-out; */
   font-size: 1.6rem;
   font-family: 'Merriweather', serif;
-  /* border-radius: 5px; */
-  /* margin: 0 auto; */
 }
 
 .dropdown-items a:hover {
@@ -161,7 +150,6 @@ main {
   transition: 0.3s ease-out;
 }
 
-/* show dd items */
 .dropdown:focus .dropdown-items {
   outline: none;
   transform: translateY(20px);
@@ -177,7 +165,6 @@ main {
   transition: 0.3s ease-out;
 }
 
-/* mask to close menu by clicking on the button */
 .dropdown .db2 {
   position: absolute;
   top: 0;
@@ -188,7 +175,6 @@ main {
   cursor: pointer;
   z-index: 10;
   display: none;
-  /* transition: 0.3s ease-in-out; */
 }
 .dropdown:focus .db2 {
   display: inline-block;
@@ -198,7 +184,6 @@ main {
   outline: none;
   visibility: hidden;
   opacity: 0;
-  /* transition: 0.3s ease-out; */
   transition: 0.3s ease-out;
 }
 
@@ -210,4 +195,25 @@ main {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+}
+
+#logout-btn{
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .dropbtn {
+    font-size: 2.5rem;
+  }
+
+  .dropdown-items a {
+    font-size: 1.8rem;
+  }
+
+  .dropdown .dropdown-items {
+    width: 20rem;
+  }
+
 }

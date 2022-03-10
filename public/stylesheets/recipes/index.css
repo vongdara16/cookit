@@ -1,0 +1,9 @@
+h1#all-recipes-title {
+  font-size: 5.0rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bolder ;
+  font-style: italic;
+  color: #D4D9D8;
+  text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
+  margin: 40px auto;
+}

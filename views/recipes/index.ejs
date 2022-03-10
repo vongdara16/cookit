@@ -1,10 +1,9 @@
 <%- include('../partials/html-head') %>
-<!-- <link rel="stylesheet" href="/stylesheets/main.css"> -->
 <link rel="stylesheet" href="/stylesheets/recipes/index.css">
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %> </h1>
+  <h1 id="all-recipes-title"><%= title %> </h1>
   <% if (recipes.length){ %> 
   <table>
     <thead>

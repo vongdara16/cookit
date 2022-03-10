@@ -8,7 +8,7 @@ function index(req, res){
   .then(recipes => {
     res.render('recipes/index', {
       recipes,
-      title: "COOKiT!👨‍🍳🍳"
+      title: "ALL RECIPES"
     })
   })
   .catch(err => {
