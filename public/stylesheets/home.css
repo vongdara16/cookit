@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+  
+  h1#cookit-title {
+    font-size: 5.6rem;
+  }
+  
+  img#chefhat-icon {
+    border: 0.1rem solid lightgray;
+    border-radius: 50%;
+  }
+  
+  p {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  
+    text-align: center;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+}

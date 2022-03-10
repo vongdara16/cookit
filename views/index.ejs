@@ -1,16 +1,53 @@
 <%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/home.css">
+<%#- include('./partials/nav') %>
+
+  <% if (!user) { %>
+    <link rel="stylesheet" href="/stylesheets/siwg.css">
+  <% } %>
+</head>
+<body>
+
+  <nav>
+    <img id="chefhat-icon" src="https://i.imgur.com/jb1VVx5.png" alt="chefhat" style="height: 5.0rem; width: 5.0rem;">
+  </nav>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
+  <h1 id="cookit-title">COOKiT</h1>
+  <!-- <h1>hello, <%#= user ? user.profile.name : "friend" %></h1>
+  <%# if (user?.profile.avatar) { %>
     <div>
       <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
+        src="<%#= user.profile.avatar %>"
+        alt="<%#= user.profile.name %> avatar"
       />
     </div>
-  <% } %>
+  <%# } %> -->
+  <p>
+    Welcome to COOKiT! Home of the best recipes from the best home-chefs! <br>
+    To enter: please select your destination below!
+  </p>
+
+  <div>
+
+    <a href="/recipes/apps">APPETIZERS</a>
+    <a href="/recipes/entrees">ENTREES</a>
+    <a href="/recipes/desserts">DESSERTS</a>
+    <a href="/recipes">ALL RECIPES</a>
+  
+    <% if (user) { %>
+      <a href="/auth/logout">
+        <button type="submit">Logout</button>
+      </a>
+    <% } else { %>
+      <a href="/auth/google" class="siwg-link">
+        <button type="submit" class="siwg">
+          <img id="siwg-image" alt="Sign in with Google" />
+        </button>
+      </a>
+    <% } %>
+
+  </div>
 </main>
 
 <%- include('./partials/footer') %>
