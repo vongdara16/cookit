@@ -1,70 +1,82 @@
-# MEN Stack with OAuth Template
+# CHECKERS UNIVERSE
 
-This is a MEN Stack template that includes OAuth.
+*** 
 
-Use this to go build things! 🚀
+### Overview 
 
-## To Use This Template
+Checkers Universe is an adaptive take on the classic game of Checkers! Before starting the game, the user can enter their desired Player Names. After, the user can select a theme of their liking from a drop down list. Then press Play to begin! The game will start with Player 1 going first and turns will alternate after every move. First player to remove all of the opposing pieces off the board wins!
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
+***
 
-Once you are in the project directory:
+### Getting Started 🏃‍♂️
 
-```bash
-rm -rf .git
-```
+- Input Player Names
+- Select A Theme
+- Press Play!
+- Have Fun! 🎉
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+<!-- ## [Play Here!](https://vongdara16.github.io/checkers-universe/) -->
+***
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
 
-Re-initialize a git repository:
+### Technologies Used 🖥
 
-```bash
-git init
-```
-Use whatever method you'd like to get your project on GitHub. If you're looking for speed though use the GitHub CLI to create a new project repository on GitHub:
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Animate.css
+- git
 
-```bash
-gh repo create <name-of-your-app-here> --public --source .
-```
-Check out the docs [here](https://cli.github.com/manual/gh_repo_create) if you want to learn more about this command. 
+***
 
-Run npm i to fetch the template's dependencies:
+### Screenshots
 
-```bash
-npm i
-```
+Wireframe
+![Home](https://i.imgur.com/CzgTlmz.png)
 
-touch a .env file:
+Start Screen
+![StartScreen](https://i.imgur.com/0ygo60n.png)
 
-```bash
-touch .env
-```
+Game Screen
+![GameScreen](https://i.imgur.com/3FMTXSE.png)
 
-Fill it with the following:
+Space Screen
+![SpaceScreen](https://i.imgur.com/tT7Eyxq.png)
 
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CALLBACK=http://localhost:3000/auth/google/oauth2callback
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
+Earth Screen
+![EarthScreen](https://i.imgur.com/u0bJUzV.png)
 
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
+Ocean Screen
+![OceanScreen](https://i.imgur.com/AkTlG0N.png)
 
-Delete this README.md and finally, make an initial commit:
+***
 
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
+### Stretch Goals ✅
 
-You're done!
+- Add double jump
+
+- Refactor code to better utilize jumping functions
+
+- Add light/dark mode to main screen
+
+- Add sound effects
+
+- Add interactive background during the game
+
+- Add more themes
+
+- Add more animation
+
+- Mobile Responsive
+
+
+***
+
+### Credits 
+
+Credits to [Animate.css](https://animate.style/) and [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)  
+All background images were found on Google.
+
+
