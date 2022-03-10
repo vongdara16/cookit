@@ -22,16 +22,24 @@
 
   <div>
 
-    <a class="recipe-links" id="app-link" href="/recipes/apps">APPETIZERS</a>
-    <a class="recipe-links" id="entree-link" href="/recipes/entrees">ENTREES</a>
-    <a class="recipe-links" id="dessert-link" href="/recipes/desserts">DESSERTS</a>
-    <a class="recipe-links" id="all-link" href="/recipes">ALL RECIPES</a>
+
   
     <% if (user) { %>
+      <a class="recipe-links" id="app-link" href="/recipes/apps">APPETIZERS</a>
+      <a class="recipe-links" id="entree-link" href="/recipes/entrees">ENTREES</a>
+      <a class="recipe-links" id="dessert-link" href="/recipes/desserts">DESSERTS</a>
+      <a class="recipe-links" id="all-link" href="/recipes">ALL RECIPES</a>
+      <a class="recipe-links" id="your-link" href="/recipes/your-recipes">YOUR RECIPES</a>
+      
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
+        <button id="logout-btn" type="submit">Logout</button>
       </a>
     <% } else { %>
+      <a class="recipe-links" id="app-link" href="/recipes/apps">APPETIZERS</a>
+      <a class="recipe-links" id="entree-link" href="/recipes/entrees">ENTREES</a>
+      <a class="recipe-links" id="dessert-link" href="/recipes/desserts">DESSERTS</a>
+      <a class="recipe-links" id="all-link" href="/recipes">ALL RECIPES</a>
+
       <a href="/auth/google" class="siwg-link recipe">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />

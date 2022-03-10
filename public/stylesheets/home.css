@@ -98,76 +98,50 @@ a.siwg-link {
   height: 46px;
 }
 
-@media only screen and (max-width: 768px) {
+#logout-btn{
+  margin: 12.5px auto;
+  font-size: 2.2rem;
+  font-family: 'Merriweather', sans-serif;
 
-  /* body {
-    background-color: #465C9B;
-  } */
+}
+
+@media only screen and (max-width: 768px) {
 
   h1#cookit-title {
     font-size: 6.0rem;
-    /* font-family: 'Philosopher', sans-serif; */
-    /* font-weight: bolder ; */
-    /* font-style: italic; */
-    /* color: #D4D9D8; */
-    /* text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020; */
     margin: 20px auto;
 
   }
   
   img#chefhat-icon {
-    /* border: 0.2rem solid #EAECEC;
-    border-radius: 50%; */
     height: 5.0rem;
     width: 5.0rem;
   }
   
   p {
-    /* text-align: center; */
     border: 2px solid #EAECEC;
-    /* padding: 10px; */
-    /* color: #EAECEC; */
-    /* background-color: rgba(78, 86, 86, 0.6); */
     font-size: 1.4rem;
-    /* font-family: 'Merriweather', serif; */
-    /* font-weight: lighter; */
-    /* font-style: italic; */
-    /* margin: 0 auto; */
     margin-bottom: 20px;
   }
   
   div {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background-color: rgba(78, 86, 86, 0.6); */
     border: 2px solid #EAECEC;
-    /* padding: 0; */
-    /* margin: 0 auto; */
   }
 
   a.recipe-links {
-    width: 20.0rem;
+    width: 22.0rem;
     height: 6.0rem;
     font-size: 2.5rem;
-    /* font-family: 'Merriweather', sans-serif; */
-    /* text-decoration: none; */
-    /* color: #EAECEC; */
-    /* border-bottom: 2px solid #EAECEC; */
-    /* text-align: center; */
     padding: 12.5px;
-    /* margin: 0 10px; */
   }
 
   a.siwg-link {
-    /* width: 191px;
-    height: 46px; */
-    /* text-align: center; */
-    /* padding: 0; */
     margin: 12.5px auto;
   }
-  
 
+  #logout-btn{
+    font-size: 2.0rem;
+  }
+  
 
 }
