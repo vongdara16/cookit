@@ -38,6 +38,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   margin: 0 auto;
+  min-height: 100vh;
+
 }
 
 nav {
@@ -147,7 +149,7 @@ main {
 .dropdown-items a:hover {
   background-color: #4D5655;
   color: #EAECEC;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
 }
 
 .dropdown:focus .dropdown-items {
@@ -155,14 +157,14 @@ main {
   transform: translateY(20px);
   visibility: visible;
   opacity: 1;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
 }
 
 .dropbtn:hover, .dropdown:focus .dropbtn {
   background-color: #D4D9D8;
   color: #49516F;
   border-radius: 2px;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
 }
 
 .dropdown .db2 {
@@ -184,7 +186,7 @@ main {
   outline: none;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
 }
 
 .siwg {

@@ -1,9 +1,136 @@
-h1#all-recipes-title {
+
+/* Colors
+49516F nav bar color
+465C9B liberty blue - body color
+6279B8 glaucous blue
+F9EBE0 linen light tan
+D4D9D8 gainsboro light gray - title color
+4D5655 davys grey dark gray - background text color   background-color: rgba(78, 86, 86, 0.6);
+1D2020 eerie black lighter black - text shadow
+EAECEC cultured lighter gray - other font color
+*/
+/* Fonts
+font-family: 'Merriweather', serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Smooch Sans', sans-serif;
+*/
+
+body {
+  background-image: url(/images/foodbgvert.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
   font-size: 5.0rem;
   font-family: 'Philosopher', sans-serif;
   font-weight: bolder ;
   font-style: italic;
   color: #D4D9D8;
-  text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
+  text-shadow: 5px 4px 0 #1D2020;
   margin: 40px auto;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 0px 5px;
+}
+
+table {
+  background-color: rgba(78, 86, 86, 0.8);
+  border-radius: 5px;
+  text-align: center;
+  outline: 2px solid white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+table > thead > tr > th {
+  color: #EAECEC;
+  font-size: 1.4rem;
+  border-bottom: 3px solid black;
+}
+
+table > tbody > tr {
+  color: #EAECEC;
+  border-bottom: 2px solid black;
+  height: 5.0rem;
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+}
+
+
+
+#td-author{
+  width: 8.0rem;
+  height: 5.0rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin: auto auto;
+}
+
+table > tbody > tr:last-child {
+  border: none;
+}
+
+td > a {
+  text-decoration: underline;
+  color: #EAECEC;
+  font-size: 1.5rem;
+  padding: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 14.0rem;
+}
+
+
+
+td > a:visited {
+  text-decoration: none;
+  color: #65CDC4;
+}
+
+td > a:hover {
+  background-color: #1D2020;
+  border-radius: 5px;
+  color: #6279B8;
+}
+@media only screen and (min-width: 768px) {
+
+  body {
+    background-image: url(/images/foodbg.jpeg);
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 6.0rem;
+  }
+
+
+  table > tbody > tr {
+    height: 7.0rem;
+  }
+
+  tbody > tr > td {
+    font-size: 1.6rem;
+  }
+
+  table > thead > tr > th {
+    font-size: 2.4rem;
+    width: 15rem;
+  }
+
+  td > a {
+    font-size: 2.0rem;
+  }
+
+  #td-author {
+    height: 7.0rem;
+  }
+
+
 }

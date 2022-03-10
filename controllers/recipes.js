@@ -79,7 +79,7 @@ function newCont(req, res){
     .then(ingredients => {
       res.render('recipes/newcont', {
         ingredients,
-        title: `Add ingredients/instructions to Recipe ${recentRecipe.name}`,
+        title: `Add Ingredients and Instructions to your ${recentRecipe.name}`,
         recipes,
       })
     })
@@ -122,7 +122,7 @@ function show(req, res){
   .then(recipe =>{
     res.render('recipes/show', {
       recipe,
-      title: 'Show recipe'
+      title: `${recipe.name}`
     })
   })
   .catch(err => {
@@ -140,7 +140,7 @@ function edit(req, res){
     .then(ingredients => {
       res.render('recipes/edit', {
         recipe,
-        title: 'Edit recipe',
+        title: `Edit ${recipe.name}` ,
         ingredients,
       })
     })
@@ -257,7 +257,7 @@ function apps(req, res){
   .populate('author')
   .then(recipes => {
     res.render('recipes/apps', {
-      title: 'SHOW ALL APPS',
+      title: 'APPETIZERS',
       recipes
     })
   })
@@ -272,7 +272,7 @@ function entrees(req, res){
   .populate('author')
   .then(recipes => {
     res.render('recipes/entrees', {
-      title: 'SHOW ALL ENTREES',
+      title: 'ENTREES',
       recipes
     })
   })
@@ -287,7 +287,7 @@ function desserts(req, res){
   .populate('author')
   .then(recipes => {
     res.render('recipes/desserts', {
-      title: 'SHOW ALL DESSERTS',
+      title: 'DESSERTS',
       recipes
     })
   })
@@ -303,7 +303,7 @@ function yourRecipes(req, res){
   .populate('author')
   .then(recipes => {
     res.render('recipes/yours', {
-      title: 'SHOW ALL OF MY RECIPES',
+      title: 'MY RECIPES',
       recipes
     })
   })
