@@ -5,6 +5,7 @@ F9EBE0 linen light tan
 D4D9D8 gainsboro light gray
 4D5655 davys grey dark gray
 1D2020 eerie black lighter black
+EAECEC cultured lighter gray
 */
 /* Fonts
 font-family: 'Merriweather', serif;
@@ -18,17 +19,18 @@ font-family: 'Smooch Sans', sans-serif;
     background-color: #465C9B;
   }
   h1#cookit-title {
-    font-size: 5.6rem;
+    font-size: 6.0rem;
     font-family: 'Philosopher', sans-serif;
     font-weight: bolder ;
     font-style: italic;
     color: #D4D9D8;
     text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
+    margin: 15px auto;
 
   }
   
   img#chefhat-icon {
-    border: 0.1rem solid lightgray;
+    border: 0.1rem solid #EAECEC;
     border-radius: 50%;
   }
   
@@ -39,6 +41,14 @@ font-family: 'Smooch Sans', sans-serif;
     align-items: center; */
   
     text-align: center;
+    border: 1px solid #EAECEC;
+    padding: 10px;
+    color: #EAECEC;
+    background-color: rgba(78, 86, 86, 0.6);
+    font-size: 1.4rem;
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    font-style: italic;
 
   }
   
