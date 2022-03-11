@@ -3,49 +3,56 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h3><%= title %> page</h1>
-  <h1><%= recipe.name %></h1>
-  <h4>By: <%= recipe.author.name %> </h4>
-  <form action="/recipes/<%= recipe._id %>?_method=PUT" method="post">
-    <button type="submit">Save Recipe</button><br>
-    <label>Link: 
-      <input type="text" name="link" value="<%= recipe.link  %>" >
-    </label><br>
-    <label>
-      Type: 
-      <select name="type">
-        <option value="Appetizer">Appetizer</option>
-        <option value="Entree">Entree</option>
-        <option value="Dessert">Dessert</option>
-      </select>
-    </label>
-    <!-- <label>Instructions: 
-      <input type="text" name="instructions" value="<%= recipe.instructions %>" >
-    </label> -->
-  </form>
-  
-  <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
-    <!-- <label>Ingredients: 
-      <select name="ingredientsId">
-        <%# ingredients.forEach(ingredient => { %> 
-          <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
-        <%# }) %> 
-      </select>
-    </label> -->
-    
-    <label>
-      Ingredients: 
-      <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
-      <datalist id="ingredientsList">
-        <% ingredients.forEach(ingredient => { %> 
-          <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
-        <% }) %> 
-      </datalist>
-    </label>
-    
-    <button type="submit">Submit Ingredient</button>
-    </form>
 
+  <div id="recipe-name-author">
+    <h1><%= recipe.name %></h1>
+    <h4>By: <%= recipe.author.name %> </h4>
+  </div>
+  
+  <button form="save-recipe-form" id="save-recipe" type="submit">Save Recipe</button><br>
+
+  <div id="edit-container">
+    
+    <form id="save-recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="post">
+      <label id="type-selector">
+        Type: <br>
+        <select name="type">
+          <option value="Appetizer">Appetizer</option>
+          <option value="Entree">Entree</option>
+          <option value="Dessert">Dessert</option>
+        </select>
+      </label><br>
+      <label id="link-input">Link: <br>
+        <input id="input-recipe-link" type="text" name="link" value="<%= recipe.link  %>" >
+      </label><br>
+  
+      <!-- <label>Instructions: 
+        <input type="text" name="instructions" value="<%= recipe.instructions %>" >
+      </label> -->
+    </form>
+    
+    <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
+      <!-- <label>Ingredients: 
+        <select name="ingredientsId">
+          <%# ingredients.forEach(ingredient => { %> 
+            <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
+          <%# }) %> 
+        </select>
+      </label> -->
+      
+      <label id="ingredients-label">
+        Ingredients: <br>
+        <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
+        <datalist id="ingredientsList">
+          <% ingredients.forEach(ingredient => { %> 
+            <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
+          <% }) %> 
+        </datalist>
+        <button id="submit-ingred-btn" type="submit">+ Ingredient</button>
+      </label>
+      
+    </form>
+  
     <label>
       Current Ingredients: 
       <ul>
@@ -58,12 +65,14 @@
       </ul>
     </label>
     <form action="/recipes/<%= recipe._id %>/instructions?_method=PATCH" method="post">
-      <label>Instructions: 
-        <textarea name="instructions" cols="30" rows="10"><%= recipe.instructions %></textarea>
+      <label>Instructions: <br>
+        <textarea name="instructions" cols="30" rows="10"><%= recipe.instructions %></textarea> <br>
         <!-- <input type="text" name="instructions" value="<%#= recipe.instructions %>" > -->
+        <button type="submit">Save Instructions</button>
       </label>
-      <button type="submit">Save Instructions</button>
     </form>
+
+  </div>
     
   </main>
 

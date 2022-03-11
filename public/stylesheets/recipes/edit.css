@@ -1,0 +1,126 @@
+/* Colors
+49516F nav bar color
+465C9B liberty blue - body color
+6279B8 glaucous blue hover text color
+F9EBE0 linen light tan
+D4D9D8 gainsboro light gray - title color
+4D5655 davys grey dark gray - background text color   background-color: rgba(78, 86, 86, 0.6);
+1D2020 eerie black lighter black - text shadow
+EAECEC cultured lighter gray - other font color
+65CDC4 visited link color
+E01541 delete btn
+*/
+/* Fonts
+font-family: 'Merriweather', serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Smooch Sans', sans-serif;
+*/
+
+body {
+  background-image: url(/images/foodbgvert.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 5.0rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bolder ;
+  font-style: italic;
+  color: #D4D9D8;
+  text-shadow: 5px 4px 0 #1D2020;
+  /* margin: 40px auto;
+  margin-bottom: 20px;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 4px 8px; */
+}
+
+#recipe-name-author {
+  margin: 40px auto;
+  margin-bottom: 20px;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 4px 8px;
+}
+
+main {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #EAECEC;
+}
+
+div#edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  background-color: rgba(78, 86, 86, 0.8);
+  border: 2px solid white;
+  border-radius: 5px;
+  /* width: auto; */
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  margin: 0 10px;
+  /* text-align: center; */
+  font-size: 1.2rem;
+  background-color: #3E8914;
+  border: 2px solid #EAECEC;
+  border-radius: 4px;
+  color: #EAECEC;
+}
+
+button:focus {
+  color: #1D2020;
+}
+
+#save-recipe{
+  margin: 0 auto;
+}
+
+#type-selector {
+  font-size: 1.8rem;
+  margin: 10px auto;
+}
+
+#link-input {
+  font-size: 1.8rem;
+  margin: 10px auto;
+}
+
+#input-recipe-link {
+  font-size: 1.4rem;
+}
+
+#ingredients-label {
+  font-size: 1.8rem;
+  margin: 10px auto;
+}
+
+#ingredients-label > input {
+  font-size: 1.6rem;
+}
+
+#submit-ingred-btn {
+  /* height: 2.9rem; */
+}
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    background-image: url(/images/foodbg.jpeg);
+    background-size: cover;
+  }
+
+
+
+
+}

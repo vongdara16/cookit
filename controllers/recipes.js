@@ -188,6 +188,10 @@ function addIngredientToRecipeEdit(req, res){
         res.redirect(`/recipes/${recipe._id}/edit`)
       })
     })
+    .catch(err =>{
+      console.log(err)
+      res.redirect(`/recipes/${recipe._id}/edit`)
+    })
     // console.log(req.params)
   })
   .catch(err =>{
