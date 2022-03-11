@@ -1,22 +1,21 @@
-# CHECKERS UNIVERSE
+# COOKiT
 
 *** 
 
 ### Overview 
 
-Checkers Universe is an adaptive take on the classic game of Checkers! Before starting the game, the user can enter their desired Player Names. After, the user can select a theme of their liking from a drop down list. Then press Play to begin! The game will start with Player 1 going first and turns will alternate after every move. First player to remove all of the opposing pieces off the board wins!
-
+Home of the best recipes from the best Home-Chefs! As a not signed-in user, you are able to view all recipes along with the different recipe types. When you sign-in, you are now able to add ingredients and add your special recipe!
 
 ***
 
 ### Getting Started 🏃‍♂️
 
-- Input Player Names
-- Select A Theme
-- Press Play!
-- Have Fun! 🎉
+- Select one of the items one the list to enter the site
+- If you log in, you can now view Your Recipes!
+- Also, when logged in, you can add ingredients and recipes located on the nav bar as " + "
+- Have fun 🎉
 
-<!-- ## [Play Here!](https://vongdara16.github.io/checkers-universe/) -->
+## [Start Cooking Here!](https://cookit-jv.herokuapp.com/)
 ***
 
 
@@ -25,8 +24,10 @@ Checkers Universe is an adaptive take on the classic game of Checkers! Before st
 - HTML
 - CSS
 - JavaScript
+- Node.js
+- MongoDb
+- Mongoose
 - Bootstrap
-- Animate.css
 - git
 
 ***
@@ -34,49 +35,44 @@ Checkers Universe is an adaptive take on the classic game of Checkers! Before st
 ### Screenshots
 
 Wireframe
-![Home](https://i.imgur.com/CzgTlmz.png)
+![Wireframe](https://i.imgur.com/8PdjDal.png)
 
-Start Screen
-![StartScreen](https://i.imgur.com/0ygo60n.png)
+Home
+![Home](https://i.imgur.com/VyTjGwH.png)
 
-Game Screen
-![GameScreen](https://i.imgur.com/3FMTXSE.png)
+All Recipes
+![All Recipes](https://i.imgur.com/zrbwBbX.png)
 
-Space Screen
-![SpaceScreen](https://i.imgur.com/tT7Eyxq.png)
+Add Ingredients
+![Add Ingredients](https://i.imgur.com/BzgsSyu.png)
 
-Earth Screen
-![EarthScreen](https://i.imgur.com/u0bJUzV.png)
+Add Recipe
+![Add Recipe](https://i.imgur.com/EvmS41B.png)
 
-Ocean Screen
-![OceanScreen](https://i.imgur.com/AkTlG0N.png)
+Add Recipe cont.
+![Add Recipe Cont](https://i.imgur.com/5x3fXJL.png)
 
 ***
 
 ### Stretch Goals ✅
 
-- Add double jump
+- Save ingredient quantity
 
-- Refactor code to better utilize jumping functions
+- Add checkboxes for ingredients 
 
-- Add light/dark mode to main screen
+- Add ingredients in new recipes page
 
-- Add sound effects
+- Light Dark Mode
 
-- Add interactive background during the game
+- Enhance styling (animations, etc)
 
-- Add more themes
-
-- Add more animation
-
-- Mobile Responsive
-
+- Add random recipe picker and display
 
 ***
 
 ### Credits 
 
-Credits to [Animate.css](https://animate.style/) and [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)  
+Credits to [Coolors.co](https://coolors.co/), [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/), [Font awesome](https://fontawesome.com/icons)  
 All background images were found on Google.
 
 
