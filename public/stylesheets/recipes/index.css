@@ -90,6 +90,7 @@ td > a {
   flex-wrap: wrap;
   justify-content: center;
   width: 12.0rem;
+  word-break: break-all;
 }
 
 td > a:visited {

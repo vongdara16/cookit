@@ -65,7 +65,7 @@ p#slogan-home {
   background: none;
   padding: 0;
   /* margin: 0 auto; */
-  font-size: 1.8rem;
+  font-size: 2.0rem;
 }
 
 span#user-name {
@@ -126,6 +126,7 @@ a.siwg-link {
   h1#cookit-title {
     font-size: 6.0rem;
     margin: 20px auto;
+    margin-bottom: 5px;
 
   }
   
@@ -137,7 +138,21 @@ a.siwg-link {
   p {
     border: 2px solid #EAECEC;
     font-size: 1.4rem;
+    margin: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  p#slogan-home {
+    border: none;
+    background: none;
+    padding: 0;
+    /* margin: 0 auto; */
+    font-size: 1.4rem;
     margin-bottom: 20px;
+  }
+  
+  span#user-name {
+    color: #11B5E4;
   }
   
   div {

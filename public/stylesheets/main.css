@@ -149,7 +149,7 @@ main {
 .dropdown-items a:hover {
   background-color: #4D5655;
   color: #EAECEC;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .dropdown:focus .dropdown-items {
@@ -157,14 +157,14 @@ main {
   transform: translateY(20px);
   visibility: visible;
   opacity: 1;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .dropbtn:hover, .dropdown:focus .dropbtn {
   background-color: #D4D9D8;
   color: #49516F;
   border-radius: 2px;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .dropdown .db2 {
@@ -180,13 +180,13 @@ main {
 }
 .dropdown:focus .db2 {
   display: inline-block;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 .dropdown .db2:focus .dropdown-items {
   outline: none;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .siwg {
