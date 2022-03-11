@@ -140,6 +140,7 @@ td > a:hover {
   td > a {
     font-size: 2.0rem;
     margin: 0 auto;
+    width: auto;
   }
 
   #td-author {
