@@ -130,7 +130,7 @@ button:focus {
   align-content: center;
 }
 
-#test-cont {
+#ingred-cont {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -172,6 +172,42 @@ button:focus {
     background-image: url(/images/foodbg.jpeg);
     background-size: cover;
   }
+
+  h1 {
+    font-size: 6.0rem;
+  }
+
+  #save-recipe {
+    font-size: 2.0rem;
+    width: 15rem;
+    height: 5rem;
+  }
+
+  #ingredients-label > input {
+    font-size: 1.8rem;
+  }
+
+  #submit-ingred-btn {
+    width: 15rem;
+    height: 3.5rem;
+  }
+
+  #ingred-list {
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    /* margin: 0 auto; */
+    column-gap: 3.5rem;
+  }
+
+  #instruct-text-area {
+    width: 60rem;
+  }
+
 
 
 

@@ -57,7 +57,7 @@
       Current Ingredients: 
       <ul id="ingred-list">
         <% recipe.ingredients.forEach(ingredient => {  %>
-          <div id="test-cont">
+          <div id="ingred-cont">
             <form action="/recipes/<%= recipe._id %>/ingredients/<%= ingredient._id %>?_method=DELETE" method="post">
               <button id="delete-ingred-btn" type="submit">X</button>
             </form>
@@ -71,8 +71,8 @@
 
     <form action="/recipes/<%= recipe._id %>/instructions?_method=PATCH" method="post">
       <label id="instruct-label">Instructions: <br>
-        <button id="save-instruct-btn" type="submit">Save Instructions</button>
-        
+        <button id="save-instruct-btn" type="submit">Save Instructions</button> <br>
+
         <textarea id="instruct-text-area" name="instructions" cols="30" rows="10"><%= recipe.instructions %></textarea> <br>
         <!-- <input type="text" name="instructions" value="<%#= recipe.instructions %>" > -->
 
