@@ -14,9 +14,17 @@
 
 <main>
   <h1 id="cookit-title">COOKiT</h1>
-  <p>
+  <p id="slogan-home">
     Home of the best recipes from the best Home-Chefs. <br>
-    You can sign in with Google to add your own recipes. <br>
+  </p>
+
+  <p id="wm-home">
+    <% if(user) { %>
+      Welcome Chef, <span id="user-name"><%= user.profile.name%></span>! <br>
+      Make sure to add your ingredients before creating your recipe! <br>
+    <% } else { %>
+      You can sign in with Google to add your own recipes. <br>
+    <% } %> 
     To Enter: please select your destination below!
   </p>
 

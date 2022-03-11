@@ -1,11 +1,14 @@
 /* Colors
-465C9B liberty blue body color
-6279B8 glaucous blue
+49516F nav bar color
+465C9B liberty blue - body color
+6279B8 glaucous blue hover text color
 F9EBE0 linen light tan
-D4D9D8 gainsboro light gray title color
-4D5655 davys grey dark gray
-1D2020 eerie black lighter black text shadow
-EAECEC cultured lighter gray other font color
+D4D9D8 gainsboro light gray - title color
+4D5655 davys grey dark gray - background text color   background-color: rgba(78, 86, 86, 0.6);
+1D2020 eerie black lighter black - text shadow
+EAECEC cultured lighter gray - other font color
+65CDC4 visited link color
+E01541 delete btn
 */
 /* Fonts
 font-family: 'Merriweather', serif;
@@ -24,13 +27,14 @@ body > nav {
 }
 
 h1#cookit-title {
-  font-size: 9.0rem;
+  font-size: 10.0rem;
   font-family: 'Philosopher', sans-serif;
   font-weight: bolder ;
   font-style: italic;
   color: #D4D9D8;
   text-shadow: 4px 2px 0 #465C9B, 12px 7px 0 #1D2020;
   margin: 40px auto;
+  margin-bottom: 10px;
 
 }
 
@@ -53,7 +57,19 @@ p {
   font-weight: lighter;
   font-style: italic;
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+}
+
+p#slogan-home {
+  border: none;
+  background: none;
+  padding: 0;
+  /* margin: 0 auto; */
+  font-size: 1.8rem;
+}
+
+span#user-name {
+  color: #11B5E4;
 }
 
 div {
