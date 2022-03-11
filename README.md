@@ -68,6 +68,8 @@ Add Recipe cont.
 
 - Add random recipe picker and display
 
+- Favorites button for recipes
+
 ***
 
 ### Credits 
