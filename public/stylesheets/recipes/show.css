@@ -58,7 +58,7 @@ main {
   margin: 10px auto;
 }
 
-button {
+button.rec-btns {
   width: 8rem;
   height: 3rem;
   margin: 0 10px;
@@ -120,10 +120,6 @@ span#recipe-type {
   color: #65CDC4;
 }
 
-/* span#recipe-type {
-  color: red;
-} */
-
 label {
   /* border-bottom: 2px solid #1D2020; */
   margin: 10px;
@@ -139,15 +135,13 @@ label#instructions {
   color: #1D2020;
   border-radius: 5px;
   padding: 10px;
+  width: 100%;
+  margin: 0 auto;
 }
 #recipe-instruct {
   color: #4D5655;
   background-color: white;
 }
-
-
-
-
 
 @media only screen and (min-width: 768px) {
 
@@ -160,29 +154,31 @@ label#instructions {
     font-size: 6.0rem;
   }
 
-  button {
+  button.rec-btns {
     font-size: 1.8rem;
     width: 10rem;
     height: 4rem;
   }
 
   div#recipe-content {
-    width: 60%;
+    width: auto;
+    max-width: 80%;
     /* height: 80%; */
     margin: 10px 20px;
     
   }
 
   label#instructions {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
 
 
   #ing-list {
     /* text-align: left; */
     height: 10rem;
-    width: 20rem;
+    width: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

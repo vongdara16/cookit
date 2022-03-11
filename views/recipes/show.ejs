@@ -12,10 +12,10 @@
   <div id="buttons">
     <% if (recipe.author.equals(user?.profile._id)) { %>
       <form action="/recipes/<%= recipe._id %>/edit">
-        <button id="edit-recipe-btn" type="submit">EDIT</button>
+        <button class="rec-btns" id="edit-recipe-btn" type="submit">EDIT</button>
       </form>
       <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="post">
-        <button id="delete-recipe-btn" type="submit">DELETE</button>
+        <button class="rec-btns" id="delete-recipe-btn" type="submit">DELETE</button>
       </form>
     <% } %> 
   </div>
@@ -43,10 +43,7 @@
           </ul>
         </div>
       </label>
-    <% } %> 
-    <!-- <label for="">Quantity: 
-      <%#= recipe.quantity %> 
-    </label> -->
+    <% } %>
     <% if(recipe.instructions) { %>
       <label id="instructions" class="recipe-labels">Instructions: <br>
         <span id="recipe-instruct"><%= recipe.instructions %> </span>
