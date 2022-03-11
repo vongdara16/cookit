@@ -167,7 +167,15 @@ label#instructions {
   }
 
   div#recipe-content {
+    width: 60%;
+    /* height: 80%; */
     margin: 10px 20px;
+    
+  }
+
+  label#instructions {
+    width: 80%;
+    height: 80%;
   }
 
 

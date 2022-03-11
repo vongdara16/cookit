@@ -154,11 +154,49 @@ h1 {
     padding: 0 10px;
   }
 
+  #add-newcont-title {
+    font-size: 4.5rem;
+    width: 70rem;
+    padding: 0 10px;
+
+  }
+
   #add-new-rec-cont {
     row-gap: 30px;
     padding: 15px 20px;
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+
+  #edit-newcont-container {
+    row-gap: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  #instruct-textarea {
+    font-size: 1.8rem;
+    margin: 5px auto;
+  }
+  
+  #ingred-list-newcont {
+    height: 20rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 0 auto;
+    column-gap: 3.0rem;
+    font-size: 1.6rem;
+    padding: 0;
+  }
+  
+  #ingred-list-newcont > li {
+    align-self: flex-start;
+    /* margin: 0 auto; */
   }
   
   .add-new-rec-labels {
