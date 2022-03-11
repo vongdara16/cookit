@@ -25,8 +25,6 @@ function newRecipe(req, res){
       title: 'ADD RECIPE',
       ingredients,
     })
-    // console.log(req.body)
-    // console.log(ingredients)
   })
   .catch(err => {
     console.log(err)
@@ -36,13 +34,9 @@ function newRecipe(req, res){
 
 function create(req, res){
   console.log('create a recipe')
-  // console.log(req.body, ' body')
-  // console.log(req, ' req')
-  // console.log(req.user, ' user')
   req.body.author = req.user.profile._id
   Recipe.create(req.body)
   .then(() => {
-    // console.log(Date(recipe.createdAt).toLocaleString())
     res.redirect('/recipes')
   })
   .catch(err => {
@@ -57,8 +51,6 @@ function createNewCont(req, res){
   Recipe.create(req.body)
   .then(recipe => {
     console.log(recipe)
-    // console.log(req.params.id)
-    // console.log(req.body)
     res.redirect(`/recipes/newcont/${recipe._id}`)
   })
   .catch(err => {
@@ -69,7 +61,6 @@ function createNewCont(req, res){
 
 function newCont(req, res){
   console.log('this is the new cont function')
-  // console.log(req.body)
   Recipe.find({})
   .populate('ingredients')
   .then(recipes => {
@@ -79,9 +70,14 @@ function newCont(req, res){
     .then(ingredients => {
       res.render('recipes/newcont', {
         ingredients,
-        title: `Add Ingredients and Instructions to your ${recentRecipe.name}`,
+        title: `Add Ingredients/Instructions to ${recentRecipe.name}`,
         recipes,
+        recentRecipe,
       })
+    })
+    .catch(err =>{
+      console.log(err)
+      res.redirect('/recipes/newcont')
     })
   })
   .catch(err =>{
@@ -95,7 +91,6 @@ function addIngredientToRecipe(req, res){
   Recipe.findById(req.params.id)
   .populate('ingredients')
   .then(recipe => {
-    // console.log(recipe.ingredients)
     console.log(req.body, 'req body')
     console.log(req.body.ingredientsId)
     Ingredient.findOne({name: req.body.ingredientsId})
@@ -107,7 +102,6 @@ function addIngredientToRecipe(req, res){
         res.redirect(`/recipes/newcont/${recipe._id}`)
       })
     })
-    // console.log(req.params)
   })
   .catch(err =>{
     console.log(err)
@@ -176,7 +170,6 @@ function addIngredientToRecipeEdit(req, res){
   Recipe.findById(req.params.id)
   .populate('ingredients')
   .then(recipe => {
-    // console.log(recipe.ingredients)
     console.log(req.body, 'req body')
     console.log(req.body.ingredientsId)
     Ingredient.findOne({name: req.body.ingredientsId})
@@ -192,29 +185,11 @@ function addIngredientToRecipeEdit(req, res){
       console.log(err)
       res.redirect(`/recipes/${recipe._id}/edit`)
     })
-    // console.log(req.params)
   })
   .catch(err =>{
     console.log(err)
     res.redirect('/recipes')
   })
-
-  // Recipe.findById(req.params.id)
-  // .populate('ingredients')
-  // .then(recipe => {
-  //   console.log(recipe.ingredients)
-  //   console.log(req.body)
-  //   recipe.ingredients.push(req.body.ingredientsId)
-  //   recipe.save()
-  //   // .populate('ingredients')
-  //   .then(() =>{
-  //     res.redirect(`/recipes/${recipe._id}/edit`)
-  //   })
-  // })
-  // .catch(err =>{
-  //   console.log(err)
-  //   res.redirect('/recipes')
-  // })
 }
 
 function update(req, res){

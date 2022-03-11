@@ -6,7 +6,7 @@
   <% if (user) { %>
     <h1><%= title %></h1>
 
-    <form action="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients" method="post">
+    <form action="/recipes/<%= recentRecipe._id %>/ingredients" method="post">
       <label>
         Ingredients: 
         <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
@@ -19,7 +19,7 @@
       <button type="submit">Submit Ingredient</button>
     </form>
 
-    <% const recentRecipe = recipes[recipes.length-1].ingredients %>
+    <% const recentRecipe = recentRecipe.ingredients %>
     
     <label>Current ingredients: 
       <ul>
@@ -29,7 +29,7 @@
       </ul>
     </label>  
 
-    <form action="/recipes/<%= recipes[recipes.length-1]._id %>?_method=PUT" method="post">
+    <form action="/recipes/<%= recentRecipe._id %>?_method=PUT" method="post">
       <label>
         Instructions: 
         <textarea name="instructions" id="" cols="30" rows="10"></textarea>      

@@ -88,4 +88,28 @@ h1 {
     background-size: cover;
   }
 
+  h1 {
+    font-size: 6.0rem;
+    padding: 0 10px;
+  }
+
+  #add-new-rec-cont {
+    row-gap: 30px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .add-new-rec-labels {
+    font-size: 2.2rem;
+  }
+  
+  .add-new-rec-labels > input {
+    font-size: 1.8rem;
+  }
+  
+  .new-rec-btns {
+    font-size: 1.8rem;
+  }
+  
 }
