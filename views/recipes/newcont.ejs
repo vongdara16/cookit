@@ -4,71 +4,32 @@
 
 <main>
   <% if (user) { %>
-    <h2><%= title %></h2>
-    <!-- <form action="/recipes" method="post">
+    <h1><%= title %></h1>
+
+    <form action="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients" method="post">
       <label>
-        Name: 
-        <input type="text" name="name" autocomplete="off">
+        Ingredients: 
+        <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
+        <datalist id="ingredientsList">
+          <% ingredients.forEach(ingredient => { %> 
+            <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
+          <% }) %> 
+        </datalist>
       </label>
-      <label>
-        Type: 
-        <select name="type">
-          <option value="Appetizer">Appetizer</option>
-          <option value="Entree">Entree</option>
-          <option value="Dessert">Dessert</option>
-        </select>
-      </label>
-      <label>
-        Link: 
-        <input type="text" name="link">
-      </label> -->
-      <form action="/recipes/<%= recipes[recipes.length-1]._id %>/ingredients" method="post">
-        <!-- <label>Ingredients: 
-          <select name="ingredientsId">
-            <%# ingredients.forEach(ingredient => { %> 
-              <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
-            <%# }) %> 
-          </select>
-        </label> -->
+      <button type="submit">Submit Ingredient</button>
+    </form>
 
-        <label>
-          Ingredients: 
-          <input list="ingredientsList" name="ingredientsId" autocomplete="off" onclick="this.value=''">
-          <datalist id="ingredientsList">
-            <% ingredients.forEach(ingredient => { %> 
-              <option value="<%= ingredient.name %>" data-value="<%= ingredient._id %>">
-            <% }) %> 
-          </datalist>
+    <% const recentRecipe = recipes[recipes.length-1].ingredients %>
+    
+    <label>Current ingredients: 
+      <ul>
+        <% recentRecipe.forEach(ingredient => { %>
+          <li><%= ingredient.name  %> </li>
+          <% }) %> 
+      </ul>
+    </label>  
 
-        </label>
-        <!-- <label>
-          Ingredients: 
-          <input list="ingredientsList" name="ingredientsId" autocomplete="off">
-        </label> -->
-        <!-- <datalist id="ingredientsList"> -->
-
-        <!-- </datalist> -->
-        <!-- <label>
-          quantity: 
-          <input type="text" name="quantity">
-        </label>  -->
-        <!-- formaction="/recipes/<%#= recipes[recipes.length-1]._id %>/ingredients"-->
-        <button type="submit">Submit Ingredient</button>
-      </form>
-        <% const recentRecipe = recipes[recipes.length-1].ingredients %>
-        
-        <label>Current ingredients: 
-          <ul>
-            <% recentRecipe.forEach(ingredient => { %>
-              <li><%= ingredient.name  %> </li>
-              <% }) %> 
-          </ul>
-        </label>  
-      
-
-
-
-      <form action="/recipes/<%= recipes[recipes.length-1]._id %>?_method=PUT" method="post">
+    <form action="/recipes/<%= recipes[recipes.length-1]._id %>?_method=PUT" method="post">
       <label>
         Instructions: 
         <textarea name="instructions" id="" cols="30" rows="10"></textarea>      

@@ -89,4 +89,38 @@ h1 {
     background-size: cover;
   }
 
+  h1 {
+    font-size: 6.0rem;
+    padding: 0 10px;
+    margin-bottom: 0px;
+  }
+
+  #ingred-name-label {
+    font-size: 2.5rem;
+    margin: 20px auto;
+  }
+  
+  #ingred-input {
+    font-size: 1.8rem;
+  }
+  
+  #ingred-btn {
+    font-size: 1.8rem;
+  }
+  
+  #ingred-list {
+    /* background-color: rgba(78, 86, 86, 0.8); */
+    font-size: 2.0rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-content: center; */
+    padding: 10px 25px;
+    margin: 0 auto;
+    width: 35rem;
+    /* list-style: none; */
+    /* border: 2px solid #EAECEC; */
+    /* border-radius: 5px; */
+  }
+
 }

@@ -1,7 +1,61 @@
+/* Colors
+49516F nav bar color
+465C9B liberty blue - body color
+6279B8 glaucous blue hover text color
+F9EBE0 linen light tan
+D4D9D8 gainsboro light gray - title color
+4D5655 davys grey dark gray - background text color   background-color: rgba(78, 86, 86, 0.6);
+1D2020 eerie black lighter black - text shadow
+EAECEC cultured lighter gray - other font color
+65CDC4 visited link color
+E01541 delete btn
+*/
+/* Fonts
+font-family: 'Merriweather', serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Smooch Sans', sans-serif;
+*/
+
+body {
+  background-image: url(/images/foodbgvert.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #EAECEC;
+}
+
+h1 {
+  font-size: 4.7rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bolder ;
+  font-style: italic;
+  color: #D4D9D8;
+  text-shadow: 5px 4px 0 #1D2020;
+  margin: 40px auto;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 0px 5px;
+  margin-bottom: 20px;
+}
+
 form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    background-image: url(/images/foodbg.jpeg);
+    background-size: cover;
+  }
+
 }
