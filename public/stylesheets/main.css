@@ -44,7 +44,7 @@ body {
 
 nav {
   background-color: #49516F;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   display: flex;
   justify-content: flex-end;
   align-items: center;

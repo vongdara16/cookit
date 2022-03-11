@@ -34,12 +34,14 @@
     </label>
   
     <% if(recipe.ingredients.length) { %>
-      <label class="recipe-labels">Ingredients:
-        <ul id="ing-list">
-          <% recipe.ingredients.forEach(ingredient => { %> 
-            <li><%= ingredient.name %> </li>
-          <% }) %> 
-        </ul>
+      <label class="recipe-labels" id="ingredient-label">Ingredients:
+        <div id="ingredient-cont">
+          <ul id="ing-list">
+            <% recipe.ingredients.forEach(ingredient => { %> 
+              <li><%= ingredient.name %> </li>
+            <% }) %> 
+          </ul>
+        </div>
       </label>
     <% } %> 
     <!-- <label for="">Quantity: 

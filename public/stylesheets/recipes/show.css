@@ -83,7 +83,7 @@ div#recipe-content {
   background-color: rgba(78, 86, 86, 0.8);
   border: 2px solid white;
   border-radius: 5px;
-  width: auto;
+  /* width: auto; */
   flex-wrap: wrap;
   padding: 10px;
 }
@@ -96,7 +96,7 @@ h4 {
   font-size: 1.8rem;
 }
 
-span {
+span#recipe-type {
   font-size: 1.6rem;
 }
 
@@ -150,6 +150,34 @@ label#instructions {
     background-size: cover;
   }
 
+  h1 {
+    font-size: 6.0rem;
+  }
+
+  button {
+    font-size: 1.8rem;
+    width: 10rem;
+    height: 4rem;
+  }
+
+  div#recipe-content {
+    margin: 10px 20px;
+  }
+
+
+  #ing-list {
+    /* text-align: left; */
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    /* margin: 0 auto; */
+    column-gap: 3.5rem;
+    
+  }
 
 
 }
