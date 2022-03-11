@@ -36,7 +36,7 @@ h1 {
 }
 
 table {
-  background-color: rgba(78, 86, 86, 0.8);
+  background-color: rgba(78, 86, 86, 0.9);
   border-radius: 5px;
   text-align: center;
   outline: 2px solid white;
@@ -54,43 +54,44 @@ table > thead > tr > th {
 table > tbody > tr {
   color: #EAECEC;
   border-bottom: 2px solid black;
-  height: 5.0rem;
+  /* height: 5.0rem; */
   font-size: 1.2rem;
   font-family: 'Merriweather', serif;
 }
 
-
-
 #td-author{
   width: 8.0rem;
-  height: 5.0rem;
-  display: flex;
+  /* height: 5.0rem; */
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5px;
-  margin: auto auto;
+  align-items: center; */
+  /* justify-content: center;
+  align-content: center; */
+  /* padding-top: 5px; */
+  /* margin: auto auto; */
 }
 
 table > tbody > tr:last-child {
   border: none;
 }
 
+td {
+  padding: 2px 5px;
+}
+
 td > a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #EAECEC;
   font-size: 1.5rem;
   padding: 10px 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 14.0rem;
+  width: 12.0rem;
 }
 
-
-
 td > a:visited {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #65CDC4;
 }
 
@@ -99,6 +100,7 @@ td > a:hover {
   border-radius: 5px;
   color: #6279B8;
 }
+
 @media only screen and (min-width: 768px) {
 
   body {
@@ -108,8 +110,17 @@ td > a:hover {
 
   h1 {
     font-size: 6.0rem;
+    padding: 0 15px;
   }
 
+  table {
+    background-color: rgba(78, 86, 86, 0.7);
+  }
+
+  table > thead > tr > th {
+    font-size: 2.4rem;
+    width: 20rem;
+  }
 
   table > tbody > tr {
     height: 7.0rem;
@@ -117,20 +128,20 @@ td > a:hover {
 
   tbody > tr > td {
     font-size: 1.6rem;
+    border: 5px;
   }
 
-  table > thead > tr > th {
-    font-size: 2.4rem;
-    width: 15rem;
+  td {
+    padding: 5px 10px;
   }
 
   td > a {
     font-size: 2.0rem;
+    margin: 0 auto;
   }
 
   #td-author {
     height: 7.0rem;
   }
-
 
 }
