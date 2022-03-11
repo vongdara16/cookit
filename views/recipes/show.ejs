@@ -3,46 +3,56 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h3><%= title %> page</h1>
-  <h1><%= recipe.name %></h1>
-  <h4>By: <%= recipe.author.name %> </h4>
-  <label for="">Type: 
-    <%= recipe.type %> 
-  </label>
-  <label>Link: 
-    <% if(recipe.link) { %>
-      <a href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a> 
-    <% } else { %>
-      <span>None</span>
+  <!-- <h3><%#= title %> page</h3> -->
+  <div id="recipe-name-author">
+    <h1><%= recipe.name %></h1>
+    <h4>By: <%= recipe.author.name %> </h4>
+  </div>
+
+  <div id="buttons">
+    <% if (recipe.author.equals(user?.profile._id)) { %>
+      <form action="/recipes/<%= recipe._id %>/edit">
+        <button id="edit-recipe-btn" type="submit">EDIT</button>
+      </form>
+      <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="post">
+        <button id="delete-recipe-btn" type="submit">DELETE</button>
+      </form>
     <% } %> 
-  </label>
+  </div>
 
-  <% if(recipe.ingredients.length) { %>
-    <label for="">Ingredients: 
-      <ul>
-        <% recipe.ingredients.forEach(ingredient => { %> 
-          <li><%= ingredient.name %> </li>
-        <% }) %> 
-      </ul>
-    </label>
-  <% } %> 
-  <!-- <label for="">Quantity: 
-    <%#= recipe.quantity %> 
-  </label> -->
-  <% if(recipe.instructions) { %>
-    <label for="">Instructions: 
-      <%= recipe.instructions %> 
-    </label>
-  <% } %> 
+  <div id="recipe-content">
 
-  <% if (recipe.author.equals(user?.profile._id)) { %>
-    <form action="/recipes/<%= recipe._id %>/edit">
-      <button type="submit">EDIT RECIPE</button>
-    </form>
-    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="post">
-      <button type="submit">Delete Recipe</button>
-    </form>
-  <% } %> 
+    <label class="recipe-labels">Type:<br>
+      <span id="recipe-type"><%= recipe.type %></span> 
+    </label>
+    <label class="recipe-labels">Link:<br>
+      <% if(recipe.link) { %>
+      <span id="recipe-link-a"><a id="recipe-link" href="<%= recipe.link  %>" target="_blank"><%= recipe.link  %></a></span>  
+      <% } else { %>
+        <span>None</span>
+      <% } %> 
+    </label>
+  
+    <% if(recipe.ingredients.length) { %>
+      <label class="recipe-labels">Ingredients:
+        <ul id="ing-list">
+          <% recipe.ingredients.forEach(ingredient => { %> 
+            <li><%= ingredient.name %> </li>
+          <% }) %> 
+        </ul>
+      </label>
+    <% } %> 
+    <!-- <label for="">Quantity: 
+      <%#= recipe.quantity %> 
+    </label> -->
+    <% if(recipe.instructions) { %>
+      <label id="instructions" class="recipe-labels">Instructions:<br>
+        <span id="recipe-instruct"><%= recipe.instructions %> </span>
+      </label>
+    <% } %> 
+
+  </div>
+
 
 </main>
 

@@ -1,0 +1,155 @@
+/* Colors
+49516F nav bar color
+465C9B liberty blue - body color
+6279B8 glaucous blue hover text color
+F9EBE0 linen light tan
+D4D9D8 gainsboro light gray - title color
+4D5655 davys grey dark gray - background text color   background-color: rgba(78, 86, 86, 0.6);
+1D2020 eerie black lighter black - text shadow
+EAECEC cultured lighter gray - other font color
+65CDC4 visited link color
+E01541 delete btn
+*/
+/* Fonts
+font-family: 'Merriweather', serif;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Smooch Sans', sans-serif;
+*/
+
+body {
+  background-image: url(/images/foodbgvert.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 5.0rem;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: bolder ;
+  font-style: italic;
+  color: #D4D9D8;
+  text-shadow: 5px 4px 0 #1D2020;
+  /* margin: 40px auto;
+  margin-bottom: 20px;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 4px 8px; */
+}
+
+#recipe-name-author {
+  margin: 40px auto;
+  margin-bottom: 10px;
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  background-color: rgba(78, 86, 86, 0.8);
+  padding: 4px 8px;
+}
+
+main {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #EAECEC;
+
+}
+
+#buttons {
+  display: flex;
+  margin: 10px auto;
+}
+
+button {
+  width: 8rem;
+  height: 3rem;
+  margin: 0 10px;
+  /* text-align: center; */
+  font-size: 1.4rem;
+  background-color: #465C9B;
+  border: 2px solid #EAECEC;
+  border-radius: 4px;
+  color: #EAECEC;
+}
+
+#delete-recipe-btn {
+  background-color: #E01541;
+}
+
+div#recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  background-color: rgba(78, 86, 86, 0.8);
+  border: 2px solid white;
+  border-radius: 5px;
+  width: auto;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+.recipe-labels {
+  font-size: 1.8rem;
+}
+
+span {
+  font-size: 1.6rem;
+}
+
+#recipe-link {
+  color: #EAECEC;
+  /* width: 10rem;
+  height: 10rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  word-break: break-all;
+}
+
+#recipe-link:visited {
+  color: #65CDC4;
+}
+
+/* span#recipe-type {
+  color: red;
+} */
+
+label {
+  /* border-bottom: 2px solid #1D2020; */
+  margin: 10px;
+}
+
+#ing-list {
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+label#instructions {
+  background-color: white;
+  color: #1D2020;
+  border-radius: 5px;
+  padding: 10px;
+}
+#recipe-instruct {
+  color: #4D5655;
+  background-color: white;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    background-image: url(/images/foodbg.jpeg);
+    background-size: cover;
+  }
+
+
+
+}
