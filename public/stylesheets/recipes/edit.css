@@ -69,7 +69,7 @@ div#edit-container {
 button {
   width: 10rem;
   height: 3rem;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   /* text-align: center; */
   font-size: 1.2rem;
   background-color: #3E8914;
@@ -103,15 +103,68 @@ button:focus {
 #ingredients-label {
   font-size: 1.8rem;
   margin: 10px auto;
+  /* margin-bottom: 15px; */
 }
 
 #ingredients-label > input {
   font-size: 1.6rem;
+  width: 20rem;
+  margin-top: 5px;
 }
 
 #submit-ingred-btn {
-  /* height: 2.9rem; */
+  height: 3.0rem;
+  position: relative;
+  bottom: 2px;
 }
+
+#current-ingred-label {
+  font-size: 1.8rem;
+}
+
+#ingred-list {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#test-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+.ingred-name {
+  margin: 0 10px;
+  list-style: none;
+}
+
+#delete-ingred-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #E01541;
+}
+
+#instruct-label {
+  font-size: 1.8rem;
+}
+
+#instruct-text-area {
+  font-size: 1.6rem;
+}
+
+#save-instruct-btn {
+  width: 15rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+
 
 @media only screen and (min-width: 768px) {
 
