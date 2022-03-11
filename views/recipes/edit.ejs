@@ -26,19 +26,9 @@
         <input id="input-recipe-link" type="text" name="link" value="<%= recipe.link  %>" >
       </label><br>
   
-      <!-- <label>Instructions: 
-        <input type="text" name="instructions" value="<%= recipe.instructions %>" >
-      </label> -->
     </form>
     
     <form action="/recipes/<%= recipe._id %>/ingredients/edit" method="post">
-      <!-- <label>Ingredients: 
-        <select name="ingredientsId">
-          <%# ingredients.forEach(ingredient => { %> 
-            <option value="<%#= ingredient._id %>"><%#= ingredient.name %></option>
-          <%# }) %> 
-        </select>
-      </label> -->
       
       <label id="ingredients-label">
         Ingredients: <br>
@@ -74,7 +64,6 @@
         <button class="edit-rec-btns" id="save-instruct-btn" type="submit">Save Instructions</button> <br>
 
         <textarea id="instruct-text-area" name="instructions" cols="30" rows="10"><%= recipe.instructions %></textarea> <br>
-        <!-- <input type="text" name="instructions" value="<%#= recipe.instructions %>" > -->
 
       </label>
     </form>

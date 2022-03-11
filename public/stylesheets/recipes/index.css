@@ -56,21 +56,12 @@ table > thead > tr > th {
 table > tbody > tr {
   color: #EAECEC;
   border-bottom: 2px solid black;
-  /* height: 5.0rem; */
   font-size: 1.2rem;
   font-family: 'Merriweather', serif;
 }
 
 #td-author{
   width: 8.0rem;
-  /* height: 5.0rem; */
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center; */
-  /* justify-content: center;
-  align-content: center; */
-  /* padding-top: 5px; */
-  /* margin: auto auto; */
 }
 
 table > tbody > tr:last-child {
@@ -82,7 +73,6 @@ td {
 }
 
 td > a {
-  /* text-decoration: underline; */
   color: #EAECEC;
   font-size: 1.5rem;
   padding: 10px 5px;
@@ -94,7 +84,6 @@ td > a {
 }
 
 td > a:visited {
-  /* text-decoration: none; */
   color: #65CDC4;
 }
 

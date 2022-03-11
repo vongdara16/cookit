@@ -44,7 +44,6 @@ body {
 
 nav {
   background-color: #49516F;
-  /* font-size: 1.6rem; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -52,28 +51,20 @@ nav {
   gap: 10px;
   margin: 0 auto;
   border-bottom: 2px solid black;
-  /* overflow: hidden; */
 }
 
 div#nav-bar-left-items {
   margin-right: auto;
-  /* display: flex;
-  align-self: flex-end; */
 }
 
 a#nav-bar-title {
-  /* visibility: hidden; */
-  /* margin-right: auto; */
-  /* align-self: flex-end; */
   font-size: 3.4rem;
   font-family: 'Philosopher', sans-serif;
   font-weight: bolder ;
   font-style: italic;
   color: #D4D9D8;
   text-decoration: none;
-  /* border-bottom: 2px solid white; */
   display: flex;
-  /* align-items: baseline; */
 }
 
 a#nav-bar-title > span {
@@ -82,8 +73,6 @@ a#nav-bar-title > span {
 }
 
 a#nav-bar-title:focus {
-  /* color: #1D2020; */
-  /* text-decoration: underline; */
   text-shadow: 2px 1px 0 #49516F, 7px 4px 0 #1D2020;
 }
 
@@ -92,10 +81,7 @@ img#chefhat-icon {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
-  /* margin-right: auto; */
   margin: 5px 0 5px 5px;
-  /* align-self: center; */
-  /* justify-self: center; */
 }
 
 main {
@@ -193,7 +179,6 @@ main {
   width: 101px;
   height: 46px;
   border-radius: 6px;
-  /* transform: scale(0.9, 0.9); */
   display: flex;
   justify-content: center;
   margin: 0 auto;

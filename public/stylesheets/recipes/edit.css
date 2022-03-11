@@ -29,12 +29,6 @@ h1 {
   font-style: italic;
   color: #D4D9D8;
   text-shadow: 5px 4px 0 #1D2020;
-  /* margin: 40px auto;
-  margin-bottom: 20px;
-  border: 2px solid #EAECEC;
-  border-radius: 5px;
-  background-color: rgba(78, 86, 86, 0.8);
-  padding: 4px 8px; */
 }
 
 #recipe-name-author {
@@ -69,8 +63,6 @@ div#edit-container {
 button.edit-rec-btns {
   width: 10rem;
   height: 3rem;
-  /* margin: 0 10px; */
-  /* text-align: center; */
   font-size: 1.2rem;
   background-color: #3E8914;
   border: 2px solid #EAECEC;
@@ -199,7 +191,6 @@ button.edit-rec-btns:focus {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
-    /* margin: 0 auto; */
     column-gap: 3.5rem;
   }
 

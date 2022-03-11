@@ -29,12 +29,6 @@ h1 {
   font-style: italic;
   color: #D4D9D8;
   text-shadow: 5px 4px 0 #1D2020;
-  /* margin: 40px auto;
-  margin-bottom: 20px;
-  border: 2px solid #EAECEC;
-  border-radius: 5px;
-  background-color: rgba(78, 86, 86, 0.8);
-  padding: 4px 8px; */
 }
 
 #recipe-name-author {
@@ -62,7 +56,6 @@ button.rec-btns {
   width: 8rem;
   height: 3rem;
   margin: 0 10px;
-  /* text-align: center; */
   font-size: 1.4rem;
   background-color: #465C9B;
   border: 2px solid #EAECEC;
@@ -87,7 +80,6 @@ div#recipe-content {
   background-color: rgba(78, 86, 86, 0.8);
   border: 2px solid white;
   border-radius: 5px;
-  /* width: auto; */
   flex-wrap: wrap;
   padding: 10px;
 }
@@ -106,8 +98,6 @@ span#recipe-type {
 
 #recipe-link {
   color: #EAECEC;
-  /* width: 10rem;
-  height: 10rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -121,7 +111,6 @@ span#recipe-type {
 }
 
 label {
-  /* border-bottom: 2px solid #1D2020; */
   margin: 10px;
 }
 
@@ -161,33 +150,22 @@ label#instructions {
   }
 
   div#recipe-content {
-    width: auto;
-    max-width: 80%;
-    /* height: 80%; */
+    width: 70%;
     margin: 10px 20px;
     
   }
-
-  label#instructions {
-    width: 100%;
-    height: 100%;
+  #ingredient-label {
+    width: fit-content;
+    max-width: 100%;
   }
 
-
   #ing-list {
-    /* text-align: left; */
     height: 10rem;
-    width: auto;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
-    /* margin: 0 auto; */
     column-gap: 3.5rem;
-    
   }
-
-
 }
