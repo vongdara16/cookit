@@ -70,9 +70,8 @@ function newCont(req, res){
     .then(ingredients => {
       res.render('recipes/newcont', {
         ingredients,
-        title: `Add Ingredients/Instructions to ${recentRecipe.name}`,
+        title: `Add Ingredients / Instructions to ${recentRecipe.name}`,
         recipes,
-        recentRecipe,
       })
     })
     .catch(err =>{

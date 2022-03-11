@@ -43,6 +43,28 @@ h1 {
   margin-bottom: 20px;
 }
 
+#add-newcont-title {
+  font-size: 3.5rem;
+  /* margin: 0 10px; */
+  padding: 0;
+  margin: 40px 10px;
+}
+
+#edit-newcont-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: rgba(78, 86, 86, 0.8);
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+
+}
+
 #add-new-rec-cont {
   display: flex;
   align-items: center;
@@ -55,6 +77,24 @@ h1 {
   padding: 10px 10px;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+
+#submit-ingred-newcont {
+  font-size: 1.6rem;
+  margin: 10px;
+  background-color: #3E8914;
+  border: 2px solid #EAECEC;
+  border-radius: 4px;
+  color: #EAECEC;
+}
+
+#add-rec-newcont {
+  font-size: 1.6rem;
+  margin: 10px;
+  background-color: #3E8914;
+  border: 2px solid #EAECEC;
+  border-radius: 4px;
+  color: #EAECEC;
 }
 
 .add-new-rec-labels {
@@ -80,6 +120,27 @@ h1 {
   border: 2px solid #1D2020;
 
 }
+
+#instruct-textarea {
+  font-size: 1.6rem;
+  margin: 5px auto;
+}
+
+#ingred-list-newcont {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 20px;
+  margin: 0 auto;
+  width: 20rem;
+  /* list-style: none; */
+}
+
+#ingred-list-newcont > li {
+  align-self: center;
+}
+
 
 @media only screen and (min-width: 768px) {
 
