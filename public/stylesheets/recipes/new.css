@@ -43,12 +43,42 @@ h1 {
   margin-bottom: 20px;
 }
 
-form {
+#add-new-rec-cont {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  row-gap: 20px;
+  background-color: rgba(78, 86, 86, 0.8);
+  border: 2px solid #EAECEC;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.add-new-rec-labels {
+  font-size: 2.0rem;
+}
+
+.add-new-rec-labels > input {
+  font-size: 1.6rem;
+}
+
+.new-rec-btns {
+  font-size: 1.6rem;
+  margin: 10px;
+  background-color: #3E8914;
+  border: 2px solid #EAECEC;
+  border-radius: 4px;
+  color: #EAECEC;
+
+}
+
+.new-rec-btns:focus {
+  color: #1D2020;
+  border: 2px solid #1D2020;
+
 }
 
 @media only screen and (min-width: 768px) {

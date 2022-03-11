@@ -4,26 +4,28 @@
 
 <main>
   <% if (user) { %>
-    <h2><%= title %></h2>
+    <h1><%= title %></h1>
     <form action="/recipes" method="post">
-      <label>
-        Name: 
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Type: 
-        <select name="type">
-          <option value="Appetizer">Appetizer</option>
-          <option value="Entree">Entree</option>
-          <option value="Dessert">Dessert</option>
-        </select>
-      </label>
-      <label>
-        Link: 
-        <input type="text" name="link">
-      </label>
-      <button type="submit">DONE</button>
-      <button type="submit" formaction="/recipes/newcont">Add Ingredients and Instructions</button>
+      <div id="add-new-rec-cont">
+        <label class="add-new-rec-labels">
+          Name: <br>
+          <input type="text" name="name" autocomplete="off">
+        </label>
+        <label class="add-new-rec-labels">
+          Type: <br>
+          <select name="type">
+            <option value="Appetizer">Appetizer</option>
+            <option value="Entree">Entree</option>
+            <option value="Dessert">Dessert</option>
+          </select>
+        </label>
+        <label class="add-new-rec-labels">
+          Link: <br>
+          <input type="text" name="link">
+        </label>
+      </div>
+      <button class="new-rec-btns" type="submit" formaction="/recipes/newcont">Add Ingredients and Instructions</button><br>
+      <button class="new-rec-btns" type="submit">DONE</button> 
     </form>
   <% } %>
 </main>
