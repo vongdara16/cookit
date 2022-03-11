@@ -1,23 +1,30 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/ingredients/new.css">
 <%- include('../partials/nav') %>
 
 <main>
   <% if (user) { %>
-    <h2><%= title %> </h2>
-    <form action="/ingredients" method="POST">
-      <label>
-        Name: 
-        <input type="text" name="name" autocomplete="off" autofocus>
-      </label>
-      <button type="submit">Add Ingredient</button>
-    </form>
-    <ul>
-      <% ingredients.forEach(ingredient => { %>
-        <li>
-          <%= ingredient.name %> 
-        </li>
-      <% }) %> 
-    </ul>
+    <h1><%= title %> </h1>
+
+    <div id="ingred-input-cont">
+      <form action="/ingredients" method="POST">
+        <label id="ingred-name-label">
+          Name: <br>
+          <input id="ingred-input" type="text" name="name" autocomplete="off" autofocus>
+          <button id="ingred-btn" type="submit">Add Ingredient</button>
+        </label>
+      </form>
+    </div>
+
+    <div id="ingred-cont">
+      <ul id="ingred-list">
+        <% ingredients.forEach(ingredient => { %>
+          <li class="ingred-class">
+            <%= ingredient.name %> 
+          </li>
+        <% }) %> 
+      </ul>
+    </div>
   <% } %>
 </main>
 

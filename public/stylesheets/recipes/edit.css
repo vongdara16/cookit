@@ -66,7 +66,7 @@ div#edit-container {
   padding: 10px;
 }
 
-button {
+button.edit-rec-btns {
   width: 10rem;
   height: 3rem;
   /* margin: 0 10px; */
@@ -78,8 +78,10 @@ button {
   color: #EAECEC;
 }
 
-button:focus {
+button.edit-rec-btns:focus {
   color: #1D2020;
+  border: 2px solid #1D2020;
+
 }
 
 #save-recipe{
@@ -163,9 +165,6 @@ button:focus {
 }
 
 
-
-
-
 @media only screen and (min-width: 768px) {
 
   body {
@@ -207,9 +206,5 @@ button:focus {
   #instruct-text-area {
     width: 60rem;
   }
-
-
-
-
 
 }
